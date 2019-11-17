@@ -1,0 +1,168 @@
+// MOBILE
+.page-header {
+  margin-top: 13px;
+}
+
+.page-header__container {
+  position: relative;
+}
+
+.page-header__logo {
+  display: block;
+  width: 191px;
+  height: 38px;
+  margin-bottom: 15px;
+}
+
+.main-nav__toggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  display: block;
+}
+
+.main-nav__list {
+  @include reset-list;
+}
+
+.main-nav__item {
+  text-align: center;
+
+  border-top: 1px solid $gray-three;
+}
+
+.main-nav__link {
+  display: block;
+  padding-top: 22px;
+  padding-bottom: 23px;
+
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+  font-family: $font-stack;
+  color: $black-two;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  &--active {
+    cursor: pointer;
+  }
+
+  &:hover[href],
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active[href] {
+    opacity: 0.3;
+  }
+}
+
+// TABLET
+
+@media (min-width: $tablet-width) {
+  .page-header {
+    margin-top: 24px;
+  }
+
+  .page-header__container {
+    display: flex;
+  }
+
+  .page-header__logo {
+    width: 173px;
+    height: 58px;
+    margin: 0;
+  }
+
+  .main-nav {
+    width: 440px;
+    margin-left: auto;
+  }
+
+  .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav__list {
+    position: relative;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @include reset-list;
+  }
+
+  .main-nav__item {
+    border: none;
+  }
+
+  .main-nav__link {
+    position: relative;
+
+    padding: 18px 0;
+
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: $black-three;
+  }
+
+  .main-nav__link::before {
+    content: "";
+    position: absolute;
+    bottom: 6px;
+    left: 0;
+
+    width: 0;
+    height: 2px;
+
+    border-top: 2px solid $green;
+  }
+
+  .main-nav__link--active::before {
+    width: 100%;
+  }
+}
+
+// DESKTOP
+
+@media (min-width: $desktop-width) {
+  .page-header {
+    margin-top: 54px;
+  }
+
+  .page-header__logo {
+    width: 202px;
+    height: 59px;
+  }
+
+  .main-nav {
+    width: 478px;
+    margin-left: auto;
+  }
+
+  .main-nav__list {
+    position: relative;
+  }
+
+  .main-nav__link {
+    position: relative;
+
+    padding: 18px 0;
+
+    font-size: 20px;
+    line-height: 24.86px;
+    color: $white;
+    text-transform: uppercase;
+  }
+
+  .main-nav__link::before {
+    bottom: 5px;
+
+    border-top: 2px solid $white;
+  }
+}
