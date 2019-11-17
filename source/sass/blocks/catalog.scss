@@ -22,7 +22,7 @@
   padding-top: 9px;
   padding-left: 71px;
 
-  font-weight: 400;
+  font-weight: inherit;
   font-size: 24px;
   line-height: 37px;
   color: $black-two;
@@ -98,7 +98,6 @@
 
   margin-bottom: 22px;
 
-  font-weight: 400;
   font-size: 16px;
   line-height: 16px;
   color: $black-two;
@@ -143,13 +142,10 @@
   }
 
   .catalog__title {
-    position: relative;
-
     margin: 0;
     margin-bottom: 25px;
     padding: 0;
 
-    font-weight: 400;
     font-size: 36px;
 
     &::before {
@@ -211,8 +207,6 @@
     &:focus::before {
       top: 11px;
       right: -59px;
-
-      width: 33px;
     }
   }
 }
