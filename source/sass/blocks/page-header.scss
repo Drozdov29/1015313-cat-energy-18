@@ -149,7 +149,7 @@
     line-height: 24.86px;
     color: $white;
 
-    &:before {
+    &::before {
       bottom: 5px;
 
       border-color: $white;
