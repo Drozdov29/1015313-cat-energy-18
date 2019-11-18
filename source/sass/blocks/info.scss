@@ -1,0 +1,156 @@
+.info {
+  margin-bottom: 42px;
+}
+
+.info__title {
+  margin: 0;
+  margin-bottom: 29px;
+  padding: 0;
+
+  font-weight: inherit;
+  font-size: 36px;
+  line-height: 60px;
+  color: $black-two;
+}
+
+.info__list {
+  @include reset-list;
+}
+
+.info__items {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+
+  &::before {
+    content: "";
+    position: static;
+    top: 0;
+    left: 0;
+
+    display: block;
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    margin-right: 20px;
+
+    background-color: $green;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--leaf::before {
+    background-image: url("../img/advantage-leaf@1x.png");
+  }
+
+  &--powder::before {
+    background-image: url("../img/advantage-powder@1x.png");
+  }
+
+  &--dining::before {
+    background-image: url("../img/advantage-dining@1x.png");
+  }
+
+  &--clock::before {
+    background-image: url("../img/advantage-clock@1x.png");
+  }
+}
+
+.info__text {
+  margin: 0;
+  padding: 0;
+
+  line-height: 18px;
+  font-family: "Arial MT", "Arial", sans-serif;
+  color: $black-four;
+}
+
+// TABLET
+@media (min-width: $tablet-width) {
+  .info__title {
+    margin-bottom: 64px;
+
+    font-size: 60px;
+  }
+
+  .info__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    counter-reset: section;
+  }
+
+  .info__items {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 245px;
+    min-height: 230px;
+    margin-right: 138px;
+    margin-bottom: 87px;
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+
+    &::before {
+      width: 80px;
+      height: 80px;
+      margin: 0;
+      margin-top: 10px;
+      margin-bottom: 32px;
+    }
+
+    &::after {
+      content: counter(section) "";
+      position: absolute;
+      top: -30px;
+      right: 15px;
+      z-index: -1;
+
+      font-weight: inherit;
+      font-size: 281px;
+      line-height: 281.07px;
+      color: $grey;
+
+      counter-increment: section;
+    }
+
+    &--powder::after {
+      right: 0;
+    }
+
+    &--dining::after {
+      right: 0;
+    }
+
+    &--clock::after {
+      top: -30px;
+      right: -5px;
+    }
+  }
+
+  .info__text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+// DESKTOP
+
+@media (min-width: $desktop-width) {
+  .info__title {
+    margin-bottom: 61px;
+    padding-top: 0;
+  }
+
+  .info__list {
+    justify-content: space-between;
+  }
+
+  .info__items {
+    margin: 0;
+  }
+}

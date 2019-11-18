@@ -1,0 +1,165 @@
+// MOBILE
+.offer {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+
+    width: 100%;
+    height: 305px;
+
+    background-color: $green;
+    background-image: url("../img/index-background-mobile@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+.offer__title {
+  margin: 0;
+  margin-bottom: 19px;
+  padding: 0;
+  padding-top: 29px;
+
+  font-size: 36px;
+  line-height: 36px;
+  text-align: center;
+}
+
+.offer__subtitle {
+  margin: 0;
+  margin-bottom: 29px;
+  padding: 0;
+
+  line-height: 14px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.offer__img {
+  display: block;
+  margin: 0 auto;
+}
+
+.offer__link {
+  display: inline-block;
+  width: 100%;
+  margin-top: 6px;
+  margin-bottom: 22px;
+  padding: 11px 15px;
+
+  text-align: center;
+  color: $white;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  background-color: $green;
+
+  @include box-sizing;
+
+  &:hover,
+  &:focus {
+    background-color: $green-two;
+  }
+
+  &:active {
+    color: $white-opacity30;
+  }
+}
+
+// TABLET
+
+@media (min-width: $tablet-width) {
+  .offer {
+    min-height: 868px;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .offer__title {
+    width: 460px;
+    margin-bottom: 43px;
+    padding-top: 55px;
+    padding-left: 87px;
+
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 60px;
+    text-align: left;
+    color: $black-two;
+  }
+
+  .offer__subtitle {
+    margin-bottom: 46px;
+    padding-left: 88px;
+
+    font-size: 20px;
+    line-height: 20px;
+    text-align: left;
+    color: $black-two;
+  }
+
+  .offer__img {
+    position: absolute;
+    z-index: -1;
+
+    width: 709px;
+    height: 609px;
+    margin-top: -30px;
+  }
+
+  .offer__link {
+    width: auto;
+    margin: 0;
+    margin-left: 88px;
+    padding: 16px 27px;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+// DESKTOP
+
+@media (min-width: $desktop-width) {
+  .offer {
+    min-height: 582px;
+    margin-bottom: 81px;
+
+    &::before {
+      top: -115px;
+
+      display: block;
+      width: 50%;
+      height: 696px;
+      margin-left: 50%;
+
+      background-image: url("../img/index-background-desktop@1x.jpg");
+    }
+  }
+
+  .offer__title {
+    margin-bottom: 41px;
+    padding-top: 107px;
+    padding-left: 80px;
+  }
+
+  .offer__subtitle {
+    margin-bottom: 53px;
+    padding-left: 80px;
+  }
+
+  .offer__img {
+    top: 38px;
+    right: 237px;
+
+    width: 552px;
+    height: 449px;
+    margin: 0;
+  }
+}
