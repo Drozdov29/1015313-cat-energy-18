@@ -69,6 +69,10 @@
 
 // TABLET
 @media (min-width: $tablet-width) {
+  .info {
+    margin-bottom: 22px;
+  }
+
   .info__title {
     margin-bottom: 64px;
 

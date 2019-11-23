@@ -1,7 +1,7 @@
 // MOBILE
 .example {
-  // background-color: $grey;
   min-height: 705px;
+  // background-color: $grey;
 }
 
 .example__title {
@@ -28,16 +28,14 @@
   color: $black-four;
 }
 
-.example__desc {
-  margin-bottom: 20px;
-}
-
 .example__list {
   display: flex;
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
 
+  list-style: none;
   text-align: center;
-
-  @include reset-list;
 }
 
 .example__item {
@@ -77,12 +75,12 @@
   font-size: 12px;
   line-height: 12px;
   font-family: $font-second;
-  color: #444444;
+  color: $black-four;
 
   background-color: $grey;
 }
 
-.example__price {
+.example__cost {
   display: block;
   margin-bottom: 44px;
 
@@ -94,14 +92,118 @@
   text-transform: uppercase;
 }
 
+.example__cost svg {
+  width: 27px;
+  height: 34px;
+}
+
 // TABLET
 
 @media (min-width: $tablet-width) {
-  min-height: 100px;
-}
+  .example__title {
+    margin-bottom: 64px;
+    padding: 0;
 
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  .example__subtitle {
+    margin-bottom: 54px;
+    padding-right: 30px;
+
+    font-weight: inherit;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .example__desc {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 86px;
+  }
+
+  .example__list {
+    margin: 0;
+  }
+
+  .example__item {
+    width: 162px;
+
+    &:not(:last-child) {
+      margin-right: 42px;
+    }
+  }
+
+  .example__text-top {
+    padding-bottom: 21px;
+
+    font-weight: inherit;
+    font-size: 30px;
+    line-height: 37px;
+  }
+
+  .example__text-bottom {
+    margin: -10px 10px 0 10px;
+
+    font-size: 14px;
+    line-height: 14px;
+  }
+
+  .example__cost {
+    width: 180px;
+    margin: 0;
+    padding-top: 11px;
+
+    font-size: 20px;
+    text-align: right;
+
+    &-price {
+      display: inline-block;
+      margin-top: 10px;
+    }
+  }
+}
 // DESKTOP
 
 @media (min-width: $desktop-width) {
-  min-height: 100px;
+  .example__title {
+    margin-bottom: 142px;
+    padding: 0;
+  }
+
+  .example__subtitle {
+    width: 435px;
+    margin-bottom: 54px;
+    padding: 0;
+  }
+
+  .example__desc {
+    flex-direction: column;
+    margin-bottom: 25px;
+  }
+
+  .example__item {
+    flex-grow: 0;
+  }
+
+  .example__list {
+    margin-bottom: 62px;
+  }
+
+  .example__cost {
+    display: flex;
+    justify-content: space-between;
+    width: 365px;
+    margin: 0;
+    padding: 0;
+
+    font-size: 20px;
+
+    &-price {
+      display: inline-block;
+      margin: 0;
+    }
+  }
 }
