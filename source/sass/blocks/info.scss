@@ -145,6 +145,10 @@
 // DESKTOP
 
 @media (min-width: $desktop-width) {
+  .info {
+    margin-bottom: 89px;
+  }
+
   .info__title {
     margin-bottom: 61px;
     padding-top: 0;
