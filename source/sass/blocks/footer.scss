@@ -116,12 +116,14 @@
 }
 
 .page-footer__link {
+  display: flex;
+
   &--vk svg {
     width: 22px;
     height: 12px;
   }
 
-  &--instagramm svg {
+  &--instagram svg {
     width: 16px;
     height: 16px;
   }
@@ -275,7 +277,7 @@
       height: 16px;
     }
 
-    &--instagramm svg {
+    &--instagram svg {
       width: 23px;
       height: 23px;
     }
