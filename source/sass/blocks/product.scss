@@ -6,39 +6,53 @@
 .product__title {
   margin: 0 20px;
   margin-top: 15px;
-  margin-bottom: 28px;
   padding: 0;
+  padding-bottom: 28px;
 
   font-weight: inherit;
   font-size: 36px;
   line-height: 60px;
   font-family: $font-stack;
   color: $black-two;
+
+  border-bottom: 1px solid red; //$gray-six;
 }
 
-.product__block {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding-bottom: 20px;
+.product__list {
+  margin: 0;
 
-  border-top: 1px solid $gray-six;
-  border-bottom: 1px solid $gray-six;
+  list-style: none;
 
   @include box-sizing;
 }
 
-.product__img {
+.product__item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-bottom: 24px;
+
+  border-bottom: 1px solid red; //$gray-six;
+}
+
+.item-goods__link {
+  width: 140px;
+  height: 144px;
+
+  @include box-sizing;
+}
+
+.item-goods__link-img {
   max-width: 100%;
   height: auto;
 }
 
-.product-inner {
+.item-goods__inner {
   flex-grow: 1;
   width: 140px;
 }
 
-.product__link {
+.inner__link {
   text-decoration: none;
 
   &-title {
@@ -57,19 +71,19 @@
   }
 }
 
-.product__list {
+.inner__list {
   display: flex;
   flex-direction: column;
 
   @include reset-list;
 }
 
-.product__item {
+.inner__item {
   display: flex;
 }
 
-.product__name,
-.product__volume {
+.inner__name,
+.inner__volume {
   margin: 0;
   padding: 0;
 
@@ -80,17 +94,17 @@
   color: $black-four;
 }
 
-.product__name {
+.inner__name {
   text-align: left;
 }
 
-.product__volume {
+.inner__volume {
   flex-grow: 1;
 
   text-align: right;
 }
 
-.product__button.button {
+.item-goods__button.button {
   padding: 10px 0;
 
   font-weight: inherit;
@@ -98,7 +112,7 @@
   line-height: 20px;
 }
 
-.product__more {
+.more-goods {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -107,7 +121,7 @@
   @include box-sizing;
 }
 
-.product__more__img {
+.more-goods__img {
   width: 30px;
   height: 30px;
   margin: 0 auto;
@@ -115,7 +129,7 @@
   margin-bottom: 24px;
 }
 
-.product__more__title {
+.more-goods__title {
   margin: 0;
   margin-bottom: 7px;
   padding: 0;
@@ -129,7 +143,7 @@
   text-transform: uppercase;
 }
 
-.product__more__subtitle {
+.more-goods__subtitle {
   margin: 0;
   margin-bottom: 23px;
   padding: 0;

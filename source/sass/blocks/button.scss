@@ -14,7 +14,7 @@
   @include box-sizing;
 
   &--green {
-    background-color: $green;
+    background-color: yellow; //$green
 
     &:hover,
     &:focus {
