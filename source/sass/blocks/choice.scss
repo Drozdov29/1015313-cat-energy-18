@@ -1,0 +1,133 @@
+// MOBILE
+.choice__form {
+  position: relative;
+}
+
+.choice__profile {
+  margin: 0;
+  padding: 0;
+
+  border: none;
+}
+
+.choice__name {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 112px;
+  padding-bottom: 23px;
+
+  border-bottom: 1px solid $gray-six;
+}
+
+.choice__label {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  // margin: 10px 0;
+
+  font-weight: inherit;
+  font-size: 16px;
+  font-family: $font-stack;
+  color: $black-three;
+  text-transform: uppercase;
+
+  cursor: pointer;
+}
+
+.chose__text {
+  display: block;
+  // display: flex;
+  // // flex-grow: 1;
+  // width: 172px;
+  // height: 45px;
+  margin: 0;
+  margin-bottom: 14px;
+  padding: 0;
+  // margin-left: 11px;
+  // padding: 13px 0 13px 12px;
+
+  font-weight: inherit;
+  font-size: 16px;
+  font-family: $font-stack;
+  color: $black-four;
+  text-transform: uppercase;
+
+  border: 1px solid $gray-four-opacity50;
+  outline: none;
+}
+
+
+.choice__radio {
+  display: flex;
+  flex-direction: column;
+}
+
+.choice__radio-item {
+  position: relative;
+
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.choice__item-label {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  padding: 7px 0 7px 46px;
+
+  font-weight: inherit;
+  font-size: 16px;
+  line-height: 18px;
+  font-family: $font-stack;
+  color: red; //$black-three
+  text-transform: uppercase;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 30px;
+    height: 30px;
+
+    border: 1px solid $gray-four;
+    border-radius: 50%;
+  }
+
+  &:hover {
+    &::before {
+      border-color: $gray-seven;
+    }
+  }
+}
+
+.choice__item-input:checked ~ .choice__item-label::before {
+  width: 10px;
+  height: 10px;
+
+  background-color: $green;
+  background-clip: content-box;
+}
+
+.choice__item-input:focus ~ .choice__item-label {
+  border-color: #bababa;
+  opacity: 0.3;
+}
+
+// TABLET
+
+@media (min-width: $tablet-width) {
+  background-color: white;
+}
+
+
+// DESKTOP
+
+@media (min-width: $desktop-width) {
+  background-color: white;
+}
+/* Style for "Барсик" */

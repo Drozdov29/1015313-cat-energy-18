@@ -200,5 +200,15 @@
 
       border-color: $white;
     }
+
+    &--white {
+      color: $black-two;
+
+      &::before {
+        bottom: 5px;
+
+        border-color: $green;
+      }
+    }
   }
 }

@@ -1,0 +1,22 @@
+// MOBILE
+
+
+// TABLET
+
+@media (min-width: $tablet-width) {
+  .main-choice__title {
+    margin-top: 55px;
+    margin-bottom: 55px;
+  }
+}
+
+// DESKTOP
+
+@media (min-width: $desktop-width) {
+  .main-choice__title {
+    margin-top: 55px;
+    margin-bottom: 55px;
+
+    font-size: 60px;
+  }
+}

@@ -106,13 +106,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-height: 62px;
-
-  @include reset-list;
-}
-
-.page-footer__item:not(:last-child) {
-  margin-right: 33px;
+  width: 126px;
+  margin: 22px 0;
+  padding: 0;
+  padding-right: 10px;
 }
 
 .page-footer__link {
@@ -263,6 +260,7 @@
 
   .page-footer__list {
     margin: 0;
+    padding-right: 16px;
   }
 
   .page-footer__item {
