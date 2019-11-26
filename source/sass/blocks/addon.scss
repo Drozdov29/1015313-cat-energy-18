@@ -1,5 +1,151 @@
 // MOBILE
+.product {
+  @include box-sizing;
+}
 
+.addon__title {
+  position: relative;
+
+  display: inline-block;
+  margin: 0;
+  margin-top: 52px;
+  margin-bottom: 33px;
+  padding: 0;
+  padding-right: 24px;
+
+  font-weight: inherit;
+  font-size: 24px;
+  line-height: 24px;
+  font-family: $font-stack;
+  color: $black-two;
+
+  background-color: $white;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 0;
+    z-index: -1;
+
+    display: block;
+    width: 100vw;
+    height: 3px;
+
+    background-color: $green;
+  }
+}
+
+.addon__wrapper {
+  display: flex;
+  flex-direction: column;
+
+  @include box-sizing;
+}
+
+.addon__block {
+  border-bottom: 1px solid $gray-six;
+
+  @include box-sizing;
+}
+
+.addon__heading {
+  margin: 0;
+  margin-top: 13px;
+  margin-bottom: 13px;
+  padding: 0;
+
+  font-weight: inherit;
+  font-size: 16px;
+  line-height: 16px;
+  font-family: $font-stack;
+  color: $black-three;
+  text-transform: uppercase;
+}
+
+.addon__list {
+  @include reset-list;
+}
+
+.addon__item {
+  display: flex;
+  margin-bottom: 14px;
+}
+
+.addon__value {
+  text-align: left;
+}
+
+.addon__price {
+  flex-grow: 1;
+
+  text-align: right;
+}
+
+.addon__value,
+.addon__price {
+  margin: 0;
+  padding: 0;
+
+  font-weight: inherit;
+  font-size: 14px;
+  line-height: 14px;
+  font-family: $font-second;
+  color: $black-four;
+}
+
+.addon__button.button {
+  margin-bottom: 17px;
+
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.addon__stock {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 280px;
+  height: 289px;
+  margin: 0 auto;
+  margin-top: 38px;
+  margin-bottom: 34px;
+
+  background-color: $green;
+  background-image: url("../img/gift-photo-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 63px;
+    left: 50%;
+
+    width: 55px;
+    height: 60px;
+
+    background-image: url("../img/icon-gift.svg");
+    background-repeat: no-repeat;
+    transform: translateX(-50%);
+  }
+}
+
+.addon__text {
+  margin: 0;
+  padding: 0 50px;
+  padding-bottom: 44px;
+
+  font-weight: inherit;
+  font-size: 16px;
+  line-height: 20px;
+  font-family: $font-second;
+  text-align: center;
+  color: $white;
+}
 
 // TABLET
 

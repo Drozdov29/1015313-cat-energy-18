@@ -102,14 +102,17 @@
   border-bottom: 1px solid $gray-four;
 }
 
+.page-footer__item:not(:last-child) {
+  margin-right: 39px;
+}
+
 .page-footer__list {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
-  width: 126px;
+  width: 137px;
   margin: 22px 0;
   padding: 0;
-  padding-right: 10px;
 }
 
 .page-footer__link {
@@ -299,6 +302,7 @@
     }
   }
 }
+
 // DESKTOP
 
 @media (min-width: $desktop-width) {

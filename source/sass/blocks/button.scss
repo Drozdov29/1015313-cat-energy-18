@@ -1,0 +1,43 @@
+.button {
+  display: inline-block;
+  width: 100%;
+  padding: 11px 15px;
+
+  vertical-align: middle;
+  text-align: center;
+  color: $white;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  border: none;
+
+  @include box-sizing;
+
+  &--green {
+    background-color: $green;
+
+    &:hover,
+    &:focus {
+      background-color: $green-two;
+    }
+
+    &:active {
+      color: $white-opacity30;
+    }
+  }
+
+  &--grey {
+    color: $black-four;
+
+    background-color: $grey;
+
+    &:hover,
+    &:focus {
+      background-color: $gray-three;
+    }
+
+    &:active {
+      color: $black-opacity30;
+    }
+  }
+}
