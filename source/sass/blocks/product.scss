@@ -15,7 +15,7 @@
   font-family: $font-stack;
   color: $black-two;
 
-  border-bottom: 1px solid red; //$gray-six;
+  border-bottom: 1px solid $gray-six;
 }
 
 .product__list {
@@ -29,10 +29,9 @@
 .product__item {
   display: flex;
   flex-wrap: wrap;
-  // justify-content: space-between;
   padding-bottom: 24px;
 
-  border-bottom: 1px solid red; //$gray-six;
+  border-bottom: 1px solid $gray-six;
 }
 
 .item-goods__link {
@@ -182,6 +181,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     margin: 0 auto;
+    padding-bottom: 40px;
 
     list-style: none;
 
@@ -196,12 +196,12 @@
     margin-top: 140px;
     padding: 0;
 
-    background-color: rgba(0, 128, 0, 0.2); //$grey;
+    background-color: $grey;
     border: none;
   }
 
   .product__item:last-child {
-    background-color: rgba(0, 111, 0, 0.2); //$white;
+    background-color: $white;
     border: 1px solid $gray-four-opacity50;
   }
 
@@ -241,12 +241,11 @@
     margin-bottom: 32px;
   }
 
-
   .inner__item {
     padding-top: 6px;
     padding-bottom: 9px;
 
-    border-bottom: 1px solid $gray-six;
+    border-bottom: 1px solid $gray-four;
   }
 
   .inner__name,
