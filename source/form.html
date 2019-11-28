@@ -31,35 +31,39 @@
           <h2 class="visually-hidden">Анкета</h2>
           <fieldset class="choice__profile">
             <legend class="visually-hidden">Анкета</legend>
-            <div class="choice__inner">
-              <div class="choice__name">
-                <label class="choice__label" for="name">Имя&#63;<sup>&#42;</sup>
-                  <input class="choice__text" type="text" name="name" id="name" placeholder="Барсик" required="">
-                </label>
-                <label class="choice__label" for="weight">Вес (кг)&#58;<sup>&#42;</sup>
-                  <input class="choice__text" type="text" name="weight" id="weight" placeholder="7" required="">
-                </label>
-                <label class="choice__label" for="age">Возраст (лет)&#58;
-                  <input class="choice__text" type="text" name="age" id="age" placeholder="7">
-                </label>
-              </div>
-              <div class="choice__radio">
-                <div class="choice__radio-item">
-                  <input class="visually-hidden choice__item-input" type="radio" name="program" id="reducing" value="Похудение" checked="">
-                  <label class="choice__item-label" for="reducing">Похудение</label>
-                </div>
-                <div class="choice__radio-item">
-                  <input class="visually-hidden choice__item-input" type="radio" name="program" id="weight-gain" value="Набор массы">
-                  <label class="choice__item-label" for="weight-gain">Набор массы</label>
-                </div>
-                <div class="choice__radio-item">
-                  <input class="visually-hidden choice__item-input" type="radio" name="program" id="unknown" value="Не знаю (Нужен ваш совет)">
-                  <label class="choice__item-label" for="unknown">Не знаю (Нужен ваш совет)</label>
-                </div>
-              </div>
-            </div>
-          <!-- </fieldset>
-          <fieldset class="choice__contact">
+              <ul class="choice__list name">
+                <li class="name__item">
+                  <label class="name__label" for="name">Имя&#63;<sup>&#42;</sup></label>
+                  <input class="name__text" type="text" name="name" id="name" placeholder="Барсик" required="">
+                </li>
+                <li class="name__item">
+                  <label class="name__label" for="weight">Вес (кг)&#58;<sup>&#42;</sup></label>
+                  <input class="name__text" type="text" name="weight" id="weight" placeholder="7" required="">
+                </li>
+                <li class="name__item">
+                  <label class="name__label" for="age">Возраст (лет)&#58;</label>
+                  <input class="name__text" type="text" name="age" id="age" placeholder="7">
+                </li>
+              </ul>
+          </fieldset>
+          <fieldset class="choice__program">
+            <legend class="visually-hidden">Выбор программы</legend>
+            <ul class="choice__list radio">
+              <li class="radio__item">
+                <input class="visually-hidden radio__input" type="radio" name="program" id="reducing" value="Похудение" checked="">
+                <label class="radio__label" for="reducing">Похудение</label>
+              </li>
+              <li class="radio__item">
+                <input class="visually-hidden radio__input" type="radio" name="program" id="weight-gain" value="Набор массы">
+                <label class="radio__label" for="weight-gain">Набор массы</label>
+              </li>
+              <li class="radio__item">
+                <input class="visually-hidden radio__input" type="radio" name="program" id="unknown" value="Не знаю (Нужен ваш совет)">
+                <label class="radio__label" for="unknown">Не знаю (Нужен ваш совет)</label>
+              </li>
+            </ul>
+          </fieldset>
+          <!-- <fieldset class="choice__contact">
             <legend class="choice__heading">Контактные данные (владельца кота)</legend>
             <div class="contact-inner">
               <p>
