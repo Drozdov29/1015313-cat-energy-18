@@ -2,7 +2,7 @@
 @import "variables.scss";             // СТИЛЬ С ПЕРЕМЕННЫМИ
 @import "font.scss";                  // СТИЛЬ СО ШРИФТАМИ
 @import "mixins.scss";                // СТИЛЬ С МИКСИНАМИ
-// @import "outlines.scss";              // СТИЛЬ ОБВОДКАМИ
+@import "outlines.scss";              // СТИЛЬ ОБВОДКАМИ
 @import "scaffolding.scss";           // СТИЛЬ СО BODY
 // BLOCK index.html
 @import "blocks/button.scss";        // Кнопка
