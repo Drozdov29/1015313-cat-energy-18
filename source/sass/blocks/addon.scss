@@ -331,6 +331,7 @@
   }
 
   .addon__stock {
+    align-items: flex-start;
     width: 245px;
     height: 289px;
     margin: 0;
@@ -338,13 +339,13 @@
     background-image: url("../img/gift-photo-desktop@1x.jpg");
 
     &::before {
-      top: 65px;
-      left: 118px;
+      left: 123px;
     }
   }
 
   .addon__text {
     margin: 0;
+    margin-top: 186px;
     padding: 0 30px;
 
     text-align: center;
