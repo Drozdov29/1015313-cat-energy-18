@@ -82,6 +82,7 @@
   font-size: 16px;
   line-height: 18px;
   font-family: $font-stack;
+  color: $black-four;
   text-transform: uppercase;
 
   border: 1px solid $gray-four-opacity50;
@@ -298,7 +299,7 @@
 .choice__button {
   margin-top: 16px;
 
-  font-weight: 400;
+  font-weight: inherit;
   font-size: 16px;
   line-height: 20px;
 }
@@ -321,7 +322,156 @@
 
 @media (min-width: $tablet-width) {
   .main-choice__title {
-    margin-top: 55px;
+    font-size: 60px;
+
+    @include reset-m-p;
+  }
+
+  .main-choice__subtitle {
+    margin-bottom: 40px;
+    padding-right: 325px;
+    padding-left: 40px;
+
+    font-size: 20px;
+    line-height: 30px;
+
+    @include reset-m-p;
+  }
+
+  .choice {
+    padding-right: 37px;
+    padding-left: 40px;
+  }
+
+  .choice__label {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .choice__input {
+    position: relative;
+
+    flex-grow: 1;
+    height: 52px;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .choice__list--name,
+  .choice__list--radio {
+    border: none;
+  }
+
+  .choice__input--name {
+    padding-left: 20px;
+  }
+
+  .choice__list--radio {
+    padding: 30px;
+
+    border: 1px solid red; //$gray-four-opacity50;
+  }
+
+  .choice__item--radio:first-child {
+    margin-top: 0;
+  }
+
+  .choice__item--radio:not(:last-child) {
+    margin-bottom: 33px;
+  }
+
+  .choice__input--radio + label::before {
+    top: -8px;
+    left: -50px;
+
+    width: 40px;
+    height: 40px;
+  }
+
+  .choice__input--radio:checked + label::after {
+    top: 2px;
+    left: -37px;
+
+    width: 18px;
+    height: 18px;
+  }
+
+  .choice__heading {
+    font-size: 36px;
+    line-height: 36px;
+
+    // background-color: $white;
+
+    &::after {
+      top: 15px;
+      left: 0;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 15px;
+      right: 0;
+      z-index: -1;
+
+      display: block;
+      width: 100vw;
+      height: 3px;
+
+      background-color: $green;
+    }
+  }
+
+  .choice__input--textarea {
+    width: 631px;
+    height: 174px;
+    margin-bottom: 20px;
+    padding: 13px;
+
+    resize: none;
+  }
+
+  .choice__list--additionally {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .choice__item--additionally {
+    margin-bottom: 54px;
+    padding-left: 45px;
+  }
+
+  .choice__item--additionally:nth-child(odd) {
+    width: 343px;
+  }
+
+  .choice__input--additionally + label::before {
+    top: -5px;
+    left: -1px;
+
+    width: 40px;
+    height: 40px;
+  }
+
+  .choice__footer {
+    display: flex;
+  }
+
+  .choice__button {
+    width: 283px;
+    height: 52px;
+    margin-top: 0;
+    margin-right: 100px;
+
+    font-size: 20px;
+  }
+
+  .choice__stars {
+    margin: 0;
+    padding: 0;
+
+    font-size: 16px;
   }
 }
 
