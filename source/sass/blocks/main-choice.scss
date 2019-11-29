@@ -25,7 +25,10 @@
 }
 
 .choice__profile,
-.choice__program {
+.choice__program,
+.choice__contact,
+.choice__commit,
+.choice__additionally {
   margin: 0;
   padding: 0;
 
@@ -33,6 +36,8 @@
 }
 
 .choice__list {
+  position: relative;
+
   border-bottom: 1px solid red; //$gray-six;
 
   @include reset-list;
@@ -40,13 +45,17 @@
 }
 
 .name,
-.radio {
+.radio,
+.contact {
   display: flex;
   flex-direction: column;
   padding-bottom: 23px;
 }
 
-.name__item {
+.name__item,
+.contact__item {
+  position: relative;
+
   display: flex;
   align-items: center;
 
@@ -81,7 +90,9 @@
   }
 }
 
-.name__text {
+.text__input {
+  position: relative;
+
   flex-grow: 1;
   height: 45px;
   padding: 0;
@@ -91,7 +102,6 @@
   font-size: 16px;
   line-height: 18px;
   font-family: $font-stack;
-  color: $black-four;
   text-transform: uppercase;
 
   border: 1px solid $gray-four-opacity50;
@@ -100,18 +110,18 @@
   @include box-sizing;
 }
 
-input[type="text"]:hover,
-input[type="text"]:focus {
-  border-color: $gray-four;
-}
+// input[type="text"]:hover,
+// input[type="text"]:focus {
+//   border-color: $gray-four;
+// }
 
-input[type="text"]:active {
-  border-color: $black-four;
-}
+// input[type="text"]:active {
+//   border-color: $black-four;
+// }
 
-input[type="text"]:required {
-  border-color: $red-error;
-}
+// input[type="text"]:required {
+//   border-color: $red-error;
+// }
 
 .radio__item {
   padding-left: 46px;
@@ -180,6 +190,191 @@ input[type="text"]:required {
 
   border-color: $gray-seven;
   opacity: 0.3;
+}
+
+.choice__list.contact {
+  padding: 0;
+
+  border: none;
+}
+
+.choice__heading {
+  position: relative;
+
+  display: inline-block;
+
+  font-weight: inherit;
+  font-size: 24px;
+  line-height: 24px;
+  font-family: $font-stack;
+  color: $black-two;
+
+  // background-color: $white;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 0;
+    z-index: -1;
+
+    display: block;
+    width: 100vw;
+    height: 3px;
+
+    background-color: $green;
+  }
+}
+
+.choice__heading--contact {
+  margin-top: 30px;
+  margin-bottom: 34px;
+}
+
+.contact__item {
+  margin-bottom: 15px;
+}
+
+.contact__email,
+.contact__phone {
+  padding-right: 12px;
+
+  font-weight: inherit;
+  font-size: 16px;
+  line-height: 18px;
+  font-family: $font-stack;
+  color: $black-three;
+  text-transform: uppercase;
+}
+
+.contact__img {
+  position: absolute;
+}
+
+.contact__img--email {
+  top: 16px;
+  right: 16px;
+}
+
+.contact__img--phone {
+  top: 13px;
+  right: 13px;
+}
+
+.choice__commit {
+  padding-bottom: 20px;
+}
+
+.choice__heading--commit {
+  margin-top: 13px;
+  margin-bottom: 35px;
+}
+
+.choice__textarea {
+  width: 280px;
+  height: 150px;
+  padding: 13px;
+  overflow: auto;
+
+  font-weight: inherit;
+  font-size: 16px;
+  line-height: 18px;
+  font-family: $font-stack;
+  color: $black-four;
+  text-transform: uppercase;
+
+  border: 1px solid $gray-four-opacity50;
+
+  resize: horizontal;
+
+  @include box-sizing;
+}
+
+.choice__heading-additionally {
+  margin-top: 7px;
+  margin-bottom: 41px;
+}
+
+.additionally__item {
+  margin-bottom: 24px;
+  padding-left: 45px;
+}
+
+.additionally__label {
+  position: relative;
+
+  display: block;
+
+  font-weight: inherit;
+  font-size: 16px;
+  line-height: 18px;
+  font-family: $font-stack;
+  color: $black-three;
+  text-transform: uppercase;
+
+  cursor: pointer;
+}
+
+.additionally__input + label::before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: -46px;
+
+  width: 30px;
+  height: 30px;
+
+  border: 1px solid $gray-four;
+}
+
+.additionally__input:checked + label::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: -41px;
+
+  width: 21px;
+  height: 16px;
+
+  background-image: url("../img/icon-tick.svg");
+  background-repeat: no-repeat;
+}
+
+.additionally__input + label:hover::before,
+.additionally__input + label:focus::before {
+  border-color: $gray-seven;
+}
+
+.additionally__input:disabled + label {
+  color: $black-three;
+
+  border-color: $gray-seven;
+  opacity: 0.3;
+}
+
+.choice__button {
+  margin-top: 16px;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+
+  background-color: red;
+  opacity: 0.2;
+}
+
+.choice__stars {
+  margin: 0;
+  margin-top: 20px;
+  margin-bottom: 32px;
+  padding: 0;
+
+  font-weight: inherit;
+  font-size: 14px;
+  line-height: 16px;
+  font-family: $font-second;
+  text-align: center;
+  color: $black-four;
 }
 
 // TABLET
