@@ -68,7 +68,7 @@
   text-transform: uppercase;
 }
 
-.choice__label--name {
+.choice__label-name {
   padding-right: 11px;
 }
 
@@ -91,7 +91,7 @@
   @include box-sizing;
 }
 
-.choice__input--name {
+.choice__input-name {
   padding: 0;
   padding-left: 10px;
 }
@@ -194,7 +194,7 @@
 }
 
 .choice__heading--contact {
-  margin-top: 30px;
+  margin-top: 31px;
   margin-bottom: 34px;
 }
 
@@ -322,30 +322,48 @@
 
 @media (min-width: $tablet-width) {
   .main-choice__title {
-    font-size: 60px;
+    margin: 0;
+    margin-top: 55px;
+    margin-bottom: 57px;
 
-    @include reset-m-p;
+    font-size: 60px;
   }
 
   .main-choice__subtitle {
-    margin-bottom: 40px;
+    margin-bottom: 65px;
     padding-right: 325px;
     padding-left: 40px;
 
     font-size: 20px;
     line-height: 30px;
-
-    @include reset-m-p;
   }
 
   .choice {
-    padding-right: 37px;
+    padding-right: 36px;
     padding-left: 40px;
+  }
+
+  .choice__item--name:not(:last-of-type) {
+    margin-bottom: 20px;
   }
 
   .choice__label {
     font-size: 20px;
     line-height: 20px;
+  }
+
+  .choice__label-name {
+    &--block1 {
+      padding-right: 18px;
+    }
+
+    &--block2 {
+      padding-right: 21px;
+    }
+
+    &--block3 {
+      padding-right: 16px;
+    }
   }
 
   .choice__input {
@@ -358,19 +376,29 @@
     line-height: 20px;
   }
 
+  .choice__list--name {
+    padding-bottom: 73px;
+  }
+
   .choice__list--name,
   .choice__list--radio {
     border: none;
   }
 
-  .choice__input--name {
+  .choice__input-name {
     padding-left: 20px;
   }
 
   .choice__list--radio {
-    padding: 30px;
+    padding-top: 32px;
+    padding-bottom: 35px;
+    padding-left: 30px;
 
     border: 1px solid red; //$gray-four-opacity50;
+  }
+
+  .choice__item--radio {
+    padding-left: 56px;
   }
 
   .choice__item--radio:first-child {
@@ -382,8 +410,8 @@
   }
 
   .choice__input--radio + label::before {
-    top: -8px;
-    left: -50px;
+    top: -10px;
+    left: -60px;
 
     width: 40px;
     height: 40px;
@@ -391,7 +419,7 @@
 
   .choice__input--radio:checked + label::after {
     top: 2px;
-    left: -37px;
+    left: -47px;
 
     width: 18px;
     height: 18px;
@@ -404,14 +432,13 @@
     // background-color: $white;
 
     &::after {
-      top: 15px;
-      left: 0;
+      top: 23px;
     }
 
     &::before {
       content: "";
       position: absolute;
-      top: 15px;
+      top: 23px;
       right: 0;
       z-index: -1;
 
@@ -423,23 +450,70 @@
     }
   }
 
+  .choice__heading--contact {
+    margin-top: 74px;
+    margin-bottom: 77px;
+  }
+
+  .choice__list--contact {
+    padding-bottom: 52px;
+  }
+
+  .choice__item-email {
+    margin-bottom: 19px;
+  }
+
+  .choice__label--email {
+    padding-right: 21px;
+  }
+
+  .choice__label--tel {
+    padding-right: 15px;
+  }
+
+  .choice__img--email {
+    top: 16px;
+    right: 19px;
+  }
+
+  .choice__img--phone {
+    top: 13px;
+    right: 16px;
+  }
+
+  .choice__input--email,
+  .choice__input--tel {
+    padding-left: 20px;
+  }
+
+  .choice__heading--commit {
+    margin-top: 13px;
+    margin-bottom: 76px;
+  }
+
   .choice__input--textarea {
     width: 631px;
     height: 174px;
     margin-bottom: 20px;
-    padding: 13px;
+    padding: 15px 19px;
 
     resize: none;
+  }
+
+  .choice__heading--additionally {
+    margin-top: 45px;
+    margin-bottom: 68px;
   }
 
   .choice__list--additionally {
     display: flex;
     flex-wrap: wrap;
+    padding-bottom: 12px;
   }
 
   .choice__item--additionally {
-    margin-bottom: 54px;
-    padding-left: 45px;
+    margin-bottom: 52px;
+    padding-left: 58px;
   }
 
   .choice__item--additionally:nth-child(odd) {
@@ -447,29 +521,34 @@
   }
 
   .choice__input--additionally + label::before {
-    top: -5px;
-    left: -1px;
+    top: -11px;
 
     width: 40px;
     height: 40px;
   }
 
+  .choice__input--additionally:checked + label::after {
+    top: 2px;
+    left: 10px;
+  }
+
   .choice__footer {
     display: flex;
+    margin-bottom: 74px;
   }
 
   .choice__button {
     width: 283px;
     height: 52px;
     margin-top: 0;
-    margin-right: 100px;
+    margin-right: 63px;
 
     font-size: 20px;
   }
 
   .choice__stars {
     margin: 0;
-    padding: 0;
+    padding-top: 16px;
 
     font-size: 16px;
   }
