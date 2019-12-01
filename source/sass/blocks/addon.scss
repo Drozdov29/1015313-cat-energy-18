@@ -314,7 +314,7 @@
 
   .feature__item {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     margin: 0;
   }
 
@@ -324,14 +324,17 @@
 
   .feature__value,
   .feature__price {
+    flex-grow: 0;
+
     font-size: 16px;
     line-height: 20px;
+    text-align: left;
   }
 
   .feature__button.button {
     width: 245px;
     margin: 0;
-    margin-left: 39px;
+    margin-left: 37px;
   }
 
   .addon__stock {
