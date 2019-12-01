@@ -29,40 +29,42 @@
       <section class="choice">
         <form class="choice__form" action="https://echo.htmlacademy.ru" method="POST">
           <h2 class="visually-hidden">Анкета</h2>
-          <fieldset class="choice__elements">
-            <legend class="visually-hidden">Анкета</legend>
-              <ul class="choice__list choice__list--name">
-                <li class="choice__item choice__item--name">
-                  <label class="choice__label choice__label-name choice__label-name--block1" for="name">Имя&#58;<sup>&#42;</sup></label>
-                  <input class="choice__input choice__input-name" type="text" name="name" id="name" placeholder="Барсик" pattern="^[А-Яа-яЁё\s]+$" required="">
+          <div class="choice__wrapper-flex">
+            <fieldset class="choice__elements choice__elements-flex">
+              <legend class="visually-hidden">Анкета</legend>
+                <ul class="choice__list choice__list--name">
+                  <li class="choice__item choice__item--name">
+                    <label class="choice__label choice__label-name choice__label-name--block1" for="name">Имя&#58;<sup>&#42;</sup></label>
+                    <input class="choice__input choice__input-name" type="text" name="name" id="name" placeholder="Барсик" pattern="^[А-Яа-яЁё\s]+$" required="">
+                  </li>
+                  <li class="choice__item choice__item--name">
+                    <label class="choice__label choice__label-name choice__label-name--block2" for="weight">Вес (кг)&#58;<sup>&#42;</sup></label>
+                    <input class="choice__input choice__input-name" type="text" name="weight" id="weight" placeholder="7" pattern="^[ 0-9]+$" required="">
+                  </li>
+                  <li class="choice__item choice__item--name">
+                    <label class="choice__label choice__label-name choice__label-name--block3" for="age">Возраст (лет)&#58;</label>
+                    <input class="choice__input choice__input-name" type="text" name="age" id="age" placeholder="7">
+                  </li>
+                </ul>
+            </fieldset>
+            <fieldset class="choice__elements choice__elements-flex">
+              <legend class="visually-hidden">Выбор программы</legend>
+              <ul class="choice__list choice__list--radio">
+                <li class="choice__item choice__item--radio">
+                  <input class="visually-hidden choice__input choice__input--radio" type="radio" name="program" id="reducing" value="Похудение" checked="">
+                  <label class="choice__label choice__label--radio" for="reducing">Похудение</label>
                 </li>
-                <li class="choice__item choice__item--name">
-                  <label class="choice__label choice__label-name choice__label-name--block2" for="weight">Вес (кг)&#58;<sup>&#42;</sup></label>
-                  <input class="choice__input choice__input-name" type="text" name="weight" id="weight" placeholder="7" pattern="^[ 0-9]+$" required="">
+                <li class="choice__item choice__item--radio">
+                  <input class="visually-hidden choice__input choice__input--radio" type="radio" name="program" id="weight-gain" value="Набор массы">
+                  <label class="choice__label choice__label--radio" for="weight-gain">Набор массы</label>
                 </li>
-                <li class="choice__item choice__item--name">
-                  <label class="choice__label choice__label-name choice__label-name--block3" for="age">Возраст (лет)&#58;</label>
-                  <input class="choice__input choice__input-name" type="text" name="age" id="age" placeholder="7">
+                <li class="choice__item choice__item--radio">
+                  <input class="visually-hidden choice__input choice__input--radio" type="radio" name="program" id="unknown" value="Не знаю (Нужен ваш совет)">
+                  <label class="choice__label choice__label--radio" for="unknown">Не знаю (Нужен ваш совет)</label>
                 </li>
               </ul>
-          </fieldset>
-          <fieldset class="choice__elements">
-            <legend class="visually-hidden">Выбор программы</legend>
-            <ul class="choice__list choice__list--radio">
-              <li class="choice__item choice__item--radio">
-                <input class="visually-hidden choice__input choice__input--radio" type="radio" name="program" id="reducing" value="Похудение" checked="">
-                <label class="choice__label choice__label--radio" for="reducing">Похудение</label>
-              </li>
-              <li class="choice__item choice__item--radio">
-                <input class="visually-hidden choice__input choice__input--radio" type="radio" name="program" id="weight-gain" value="Набор массы">
-                <label class="choice__label choice__label--radio" for="weight-gain">Набор массы</label>
-              </li>
-              <li class="choice__item choice__item--radio">
-                <input class="visually-hidden choice__input choice__input--radio" type="radio" name="program" id="unknown" value="Не знаю (Нужен ваш совет)">
-                <label class="choice__label choice__label--radio" for="unknown">Не знаю (Нужен ваш совет)</label>
-              </li>
-            </ul>
-          </fieldset>
+            </fieldset>
+          </div>
           <fieldset class="choice__elements">
             <legend class="choice__heading choice__heading--contact">Контактные данные (владельца кота)</legend>
             <ul class="choice__list choice__list--contact">
