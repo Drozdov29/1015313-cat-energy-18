@@ -1,13 +1,19 @@
-@import "normalize.scss";   // normalize
-@import "variables.scss";   // СТИЛЬ С ПЕРЕМЕННЫМИ
-@import "font.scss";        // СТИЛЬ СО ШРИФТАМИ
-@import "mixins.scss";      // СТИЛЬ С МИКСИНАМИ
-// @import "outlines.scss";    // СТИЛЬ ОБВОДКАМИ
-@import "scaffolding.scss"; // СТИЛЬ СО BODY
+@import "normalize.scss";             // normalize
+@import "variables.scss";             // СТИЛЬ С ПЕРЕМЕННЫМИ
+@import "font.scss";                  // СТИЛЬ СО ШРИФТАМИ
+@import "mixins.scss";                // СТИЛЬ С МИКСИНАМИ
+// @import "outlines.scss";              // СТИЛЬ ОБВОДКАМИ
+@import "scaffolding.scss";           // СТИЛЬ СО BODY
 // BLOCK index.html
+@import "blocks/button.scss";        // Кнопка
 @import "blocks/page-header.scss";   // Навигация
 @import "blocks/offer.scss";         // Предложение
 @import "blocks/catalog.scss";       // Каталог
 @import "blocks/info.scss";          // Как работает
 @import "blocks/example.scss";       // Живой пример
 @import "blocks/footer.scss";        // Footer
+// BLOCK form.html
+@import "blocks/main-choice.scss";   // Заглавная страница form
+// BLOCK catalog.html
+@import "blocks/product.scss";        // Product
+@import "blocks/addon.scss";          // Section form

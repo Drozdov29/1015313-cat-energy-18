@@ -1,0 +1,357 @@
+// MOBILE
+.addon {
+  overflow: hidden;
+}
+
+.addon__title {
+  position: relative;
+
+  display: inline-block;
+  margin: 0;
+  margin-top: 27px;
+  padding: 0;
+  padding-right: 24px;
+  padding-bottom: 34px;
+
+  font-weight: inherit;
+  font-size: 24px;
+  line-height: 24px;
+  font-family: $font-stack;
+  color: $black-two;
+
+  background-color: $white;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 0;
+    z-index: -1;
+
+    display: block;
+    width: 100vw;
+    height: 3px;
+
+    background-color: $green;
+  }
+}
+
+.addon__list {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  @include box-sizing;
+}
+
+.addon__item {
+  display: flex;
+  flex-direction: column;
+
+  border-bottom: 1px solid  $gray-six;
+
+  @include box-sizing;
+}
+
+.addon__item:first-child {
+  border-top: 1px solid $gray-six;
+}
+
+.feature__heading {
+  margin: 0;
+  margin-top: 13px;
+  margin-bottom: 13px;
+  padding: 0;
+
+  font-weight: inherit;
+  font-size: 16px;
+  line-height: 16px;
+  font-family: $font-stack;
+  color: $black-three;
+  text-transform: uppercase;
+}
+
+.feature__list {
+  display: flex;
+  flex-direction: column;
+
+  @include reset-list;
+}
+
+.feature__item {
+  display: flex;
+  margin-bottom: 14px;
+}
+
+.feature__value {
+  text-align: left;
+}
+
+.feature__price {
+  flex-grow: 1;
+
+  text-align: right;
+}
+
+.feature__value,
+.feature__price {
+  margin: 0;
+  padding: 0;
+
+  font-weight: inherit;
+  font-size: 14px;
+  line-height: 14px;
+  font-family: $font-second;
+  color: $black-four;
+}
+
+.feature__button.button {
+  margin-bottom: 16px;
+
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.addon__stock {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 280px;
+  height: 289px;
+  margin: 0 auto;
+  margin-top: 38px;
+  margin-bottom: 34px;
+
+  background-color: $green;
+  background-image: url("../img/gift-photo-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 63px;
+    left: 50%;
+
+    width: 55px;
+    height: 60px;
+
+    background-image: url("../img/icon-gift.svg");
+    background-repeat: no-repeat;
+    transform: translateX(-50%);
+  }
+}
+
+.addon__text {
+  margin: 0;
+  padding: 0 50px;
+  padding-bottom: 44px;
+
+  font-weight: inherit;
+  font-size: 16px;
+  line-height: 20px;
+  font-family: $font-second;
+  text-align: center;
+  color: $white;
+}
+
+// TABLET
+
+@media (min-width: $tablet-width) {
+  .addon__title {
+    margin-bottom: 81px;
+    padding: 0 37px;
+
+    font-size: 36px;
+    line-height: 36px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 23px;
+      right: 0;
+      z-index: -1;
+
+      display: block;
+      width: 100vw;
+      height: 3px;
+
+      background-color: $green;
+    }
+
+    &::after {
+      top: 23px;
+    }
+  }
+
+  .addon__item {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-top: 26px;
+    padding-right: 36px;
+    padding-bottom: 25px;
+    padding-left: 38px;
+
+    border-right: 1px solid $gray-four;
+    border-bottom: 1px solid $gray-four;
+    border-left: 1px solid $gray-four;
+
+    @include box-sizing;
+  }
+
+  .addon__item:first-child {
+    border-top: 1px solid $gray-four;
+  }
+
+
+  .feature__heading {
+    margin: 0;
+    margin-right: auto;
+    margin-bottom: 2px;
+    padding: 0;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .feature__list {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .feature__item {
+    display: flex;
+    margin: 0;
+  }
+
+  .feature__price {
+    width: 95px;
+  }
+
+  .feature__value,
+  .feature__price {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .feature__button.button {
+    margin: 0;
+    margin-top: 23px;
+  }
+
+  .addon__stock {
+    justify-content: flex-end;
+    align-items: center;
+    width: 708px;
+    height: 200px;
+    margin-top: 70px;
+    margin-bottom: 77px;
+
+    background-image: url("../img/gift-photo-tablet@1x.jpg");
+
+    &::before {
+      top: 65px;
+      left: 118px;
+    }
+  }
+
+  .addon__text {
+    width: 285px;
+    margin: 0;
+    padding: 0;
+    padding-right: 115px;
+
+    text-align: left;
+  }
+}
+
+// DESKTOP
+@media (min-width: $desktop-width) {
+  .addon {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 84px;
+  }
+
+  .addon__title {
+    margin-top: 36px;
+    margin-bottom: 81px;
+    padding: 0;
+    padding-right: 37px;
+  }
+
+  .addon__list {
+    width: 895px;
+    margin-right: 80px;
+  }
+
+  .addon__item {
+    align-items: center;
+    padding: 0;
+    padding-top: 16px;
+    padding-bottom: 13px;
+
+    border-right: none;
+    border-left: none;
+  }
+
+  .feature__heading {
+    margin-right: auto;
+    padding: 0;
+  }
+
+  .feature__list {
+    display: flex;
+    width: 287px;
+  }
+
+  .feature__item {
+    display: flex;
+    justify-content: flex-start;
+    margin: 0;
+  }
+
+  .feature__price {
+    width: 45px;
+  }
+
+  .feature__value,
+  .feature__price {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .feature__button.button {
+    width: 245px;
+    margin: 0;
+    margin-left: 39px;
+  }
+
+  .addon__stock {
+    align-items: flex-start;
+    width: 245px;
+    height: 289px;
+    margin: 0;
+
+    background-image: url("../img/gift-photo-desktop@1x.jpg");
+
+    &::before {
+      left: 123px;
+    }
+  }
+
+  .addon__text {
+    margin: 0;
+    margin-top: 186px;
+    padding: 0 30px;
+
+    text-align: center;
+  }
+}

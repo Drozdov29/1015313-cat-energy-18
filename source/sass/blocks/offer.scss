@@ -45,31 +45,9 @@
 }
 
 .offer__link {
-  display: inline-block;
-  width: 100%;
   margin-top: 6px;
   margin-bottom: 22px;
-  padding: 11px 15px;
-
-  text-align: center;
-  color: $white;
-  text-transform: uppercase;
-  text-decoration: none;
-
-  background-color: $green;
-
-  @include box-sizing;
-
-  &:hover,
-  &:focus {
-    background-color: $green-two;
-  }
-
-  &:active {
-    color: $white-opacity30;
-  }
 }
-
 // TABLET
 
 @media (min-width: $tablet-width) {
