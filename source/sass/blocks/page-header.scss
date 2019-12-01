@@ -75,12 +75,17 @@
   font-weight: 500;
   font-size: 20px;
   line-height: 20px;
-  color: $black-two;
   text-transform: uppercase;
   text-decoration: none;
 
   &--active {
+    color: $black-two;
+
     cursor: pointer;
+  }
+
+  &:link {
+    color: $black-two;
   }
 
   &:hover[href],
@@ -151,7 +156,16 @@
     font-weight: 400;
     font-size: 18px;
     line-height: 24px;
-    color: $black-three;
+
+    &--active {
+      color: $black-three;
+
+      cursor: pointer;
+    }
+
+    &:link {
+      color: $black-three;
+    }
 
     &::before {
       content: "";
@@ -193,7 +207,10 @@
 
     font-size: 20px;
     line-height: 24.86px;
-    color: $white;
+
+    &:link {
+      color: $white;
+    }
 
     &::before {
       bottom: 5px;
@@ -201,7 +218,11 @@
       border-color: $white;
     }
 
-    &--white {
+    &--active {
+      color: $white;
+    }
+
+    &--black {
       color: $black-two;
 
       &::before {

@@ -148,12 +148,12 @@
     fill: $gray-five;
   }
 
-  & svg:hover,
-  & svg:focus {
+  &:hover svg,
+  &:focus svg {
     fill: $green;
   }
 
-  & svg:active {
+  &:active svg {
     opacity: 0.3;
 
     fill: $green;
@@ -195,12 +195,12 @@
     fill: $gray-five;
   }
 
-  & svg:hover,
-  & svg:focus {
+  &:hover svg,
+  &:focus svg {
     fill: $green;
   }
 
-  & svg:active {
+  &:active svg {
     opacity: 0.3;
 
     fill: $green;
