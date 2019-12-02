@@ -14,12 +14,11 @@
   line-height: 60px;
   font-family: $font-stack;
   color: $black-two;
-
-  border-bottom: 1px solid $gray-six;
 }
 
 .product__list {
   margin: 0;
+  padding: 0;
 
   list-style: none;
 
@@ -29,9 +28,14 @@
 .product__item {
   display: flex;
   flex-wrap: wrap;
+  padding: 0 20px;
   padding-bottom: 24px;
 
   border-bottom: 1px solid $gray-six;
+
+  &:first-child {
+    border-top: 1px solid $gray-six;
+  }
 }
 
 .item-goods__link {
@@ -160,6 +164,11 @@
   color: $black-four;
 }
 
+.more-goods__button.button {
+  font-size: 16px;
+}
+
+
 // TABLET
 
 @media (min-width: $tablet-width) {
@@ -170,14 +179,14 @@
     padding: 0;
 
     font-size: 60px;
-
-    border: none;
   }
 
   .product__list {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    margin: 0 auto;
+    padding: 0 30px;
     padding-bottom: 40px;
 
     list-style: none;
@@ -301,9 +310,16 @@
 @media (min-width: $desktop-width) {
   .product__title {
     margin: 0;
-    margin-top: 59px;
+    margin-top: 60px;
     margin-bottom: 23px;
     padding: 0 40px;
+  }
+
+  .product__list {
+    margin: 0 auto;
+    padding: 0 40px;
+
+    @include box-sizing;
   }
 
   .product__item {
