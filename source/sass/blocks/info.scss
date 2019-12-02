@@ -66,6 +66,10 @@
   color: $black-four;
 }
 
+br {
+  display: none;
+}
+
 // TABLET
 @media (min-width: $tablet-width) {
   .info {
