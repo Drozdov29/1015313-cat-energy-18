@@ -24,10 +24,11 @@
 
 .offer__title {
   margin: 0;
-  margin-bottom: 19px;
+  margin-bottom: 26px;
   padding: 0;
-  padding-top: 29px;
+  padding-top: 25px;
 
+  font-weight: inherit;
   font-size: 36px;
   line-height: 36px;
   text-align: center;
@@ -49,14 +50,14 @@
 }
 
 .offer__link {
-  margin-top: 6px;
+  margin-top: 4px;
   margin-bottom: 22px;
 }
 // TABLET
 
 @media (min-width: $tablet-width) {
   .offer {
-    min-height: 868px;
+    min-height: 855px;
 
     &::before {
       display: none;
@@ -66,7 +67,7 @@
   .offer__title {
     width: 460px;
     margin-bottom: 43px;
-    padding-top: 55px;
+    padding-top: 42px;
     padding-left: 87px;
 
     font-weight: 400;
@@ -91,7 +92,7 @@
     z-index: -1;
 
     width: 709px;
-    margin-top: -30px;
+    margin-top: -27px;
   }
 
   .offer__link {
@@ -110,10 +111,10 @@
 @media (min-width: $desktop-width) {
   .offer {
     min-height: 582px;
-    margin-bottom: 81px;
+    margin-bottom: 66px;
 
     &::before {
-      top: -115px;
+      top: -128px;
 
       display: block;
       width: 50%;
@@ -130,7 +131,7 @@
 
   .offer__title {
     margin-bottom: 41px;
-    padding-top: 107px;
+    padding-top: 94px;
     padding-left: 80px;
   }
 
@@ -140,10 +141,14 @@
   }
 
   .offer__img {
-    top: 27px;
+    top: 14px;
     right: 258px;
 
     width: 552px;
     margin: 0;
+  }
+
+  .offer__link {
+    margin-left: 80px;
   }
 }
