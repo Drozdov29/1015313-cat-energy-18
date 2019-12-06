@@ -129,9 +129,10 @@
 .page-footer__link {
   display: flex;
 
-  &--vk svg {
+  &--vk {
     width: 22px;
     height: 12px;
+    fill: red;
   }
 
   &--instagram svg {

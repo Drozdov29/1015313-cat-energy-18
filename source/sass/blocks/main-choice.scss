@@ -133,11 +133,21 @@ input[type="tel"]:focus {
   box-shadow: 0 0 0 2px $black-four;
 }
 
-// input[type="text"]:required,
-// input[type="email"]:required,
-// input[type="tel"]:required {
-//   box-shadow: 0 0 0 2px $red-error;
-// }
+input[type="email"]:focus + svg,
+input[type="tel"]:focus + svg {
+  fill: $green;
+}
+
+input[type="text"]:required:invalid,
+input[type="email"]:required:invalid,
+input[type="tel"]:required:invalid {
+  box-shadow: 0 0 0 2px $red-error;
+}
+
+input[type="email"]:required:invalid + svg,
+input[type="tel"]:required:invalid + svg {
+  fill: $red-error;
+}
 
 .choice__item--radio {
   padding-left: 46px;
@@ -183,13 +193,15 @@ input[type="tel"]:focus {
   border-radius: 50%;
 }
 
-.choice__input--radio + label:hover::before,
-.choice__input--radio + label:focus::before {
+input[type="radio"]:hover + label::before {
   border-color: $gray-seven;
 }
 
-.choice__input--radio:disabled + label {
-  // color: $black-three;
+input[type="radio"]:focus + label::before {
+  border-color: $gray-seven;
+}
+
+input[type="radio"]:disabled + label {
   border-color: $gray-seven;
   opacity: 0.3;
 }
@@ -242,20 +254,21 @@ input[type="tel"]:focus {
 
 .choice__input--email,
 .choice__input--tel {
-  padding-left: 12px;
+  padding-left: 14px;
 }
 
-.choice__img {
+.choice__img-email,
+.choice__img-phone {
   position: absolute;
 }
 
-.choice__img--email {
-  top: 16px;
+.choice__img-email {
+  top: 17px;
   right: 16px;
 }
 
-.choice__img--phone {
-  top: 13px;
+.choice__img-phone {
+  top: 12px;
   right: 13px;
 }
 
@@ -519,12 +532,12 @@ input[type="tel"]:focus {
     padding-right: 15px;
   }
 
-  .choice__img--email {
-    top: 16px;
+  .choice__img-email {
+    top: 20px;
     right: 19px;
   }
 
-  .choice__img--phone {
+  .choice__img-phone {
     top: 18px;
     right: 16px;
   }
@@ -671,6 +684,15 @@ input[type="tel"]:focus {
     margin-right: 80px;
   }
 
+  .choice__img-email {
+    top: 19px;
+    right: 20px;
+  }
+
+  .choice__img-phone {
+    top: 16px;
+    right: 19px;
+  }
 
   .choice__input--textarea {
     width: 1220px;
@@ -680,7 +702,6 @@ input[type="tel"]:focus {
     margin-top: 47px;
     margin-bottom: 68px;
   }
-
 
   .choice__list--additionally {
     display: flex;
