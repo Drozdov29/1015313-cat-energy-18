@@ -126,27 +126,26 @@
   list-style: none;
 }
 
+.page-footer__link svg {
+  fill: $gray-five;
+}
+
 .page-footer__link {
   display: flex;
 
   &--vk {
     width: 22px;
     height: 12px;
-    fill: red;
   }
 
-  &--instagram svg {
+  &--instagram {
     width: 16px;
     height: 16px;
   }
 
-  &--facebook svg {
+  &--facebook {
     width: 10px;
     height: 19px;
-  }
-
-  & svg {
-    fill: $gray-five;
   }
 
   &:hover svg,
@@ -156,8 +155,6 @@
 
   &:active svg {
     opacity: 0.3;
-
-    fill: $green;
   }
 }
 
@@ -170,7 +167,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 15px;
+  margin-top: 19px;
 
   font-weight: inherit;
   font-size: 16px;
@@ -179,32 +176,26 @@
   color: $black-four;
   text-decoration: none;
 
-  &:hover,
-  &:focus {
-    color: $black-four;
-  }
-
-  &:active {
-    color: $black-four;
-
-    opacity: 0.3;
-  }
-
-  & svg {
+  &--htmlacademy {
+    width: 27px;
+    height: 34px;
     margin-left: auto;
 
     fill: $gray-five;
   }
 
+  &:hover,
   &:hover svg,
+  &:focus,
   &:focus svg {
+    color: $black-four;
+
     fill: $green;
   }
 
+  &:active,
   &:active svg {
     opacity: 0.3;
-
-    fill: $green;
   }
 }
 
@@ -287,17 +278,17 @@
   }
 
   .page-footer__link {
-    &--vk svg {
+    &--vk {
       width: 30px;
       height: 16px;
     }
 
-    &--instagram svg {
+    &--instagram {
       width: 23px;
       height: 23px;
     }
 
-    &--facebook svg {
+    &--facebook {
       width: 14px;
       height: 28px;
     }
