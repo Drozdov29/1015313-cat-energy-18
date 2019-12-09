@@ -75,12 +75,17 @@
   font-weight: 500;
   font-size: 20px;
   line-height: 20px;
-  color: $black-two;
   text-transform: uppercase;
   text-decoration: none;
 
   &--active {
+    color: $black-two;
+
     cursor: pointer;
+  }
+
+  &:link {
+    color: $black-two;
   }
 
   &:hover[href],
@@ -116,6 +121,20 @@
   }
 
   .page-header__logo {
+    height: 58px;
+
+    @include box-sizing;
+
+    &[href]:hover {
+      opacity: 0.8;
+    }
+
+    &[href]:active {
+      opacity: 0.6;
+    }
+  }
+
+  .page-header__logo-img {
     width: 173px;
     height: 58px;
     margin: 0;
@@ -151,7 +170,16 @@
     font-weight: 400;
     font-size: 18px;
     line-height: 24px;
-    color: $black-three;
+
+    &--active {
+      color: $black-three;
+
+      cursor: pointer;
+    }
+
+    &:link {
+      color: $black-three;
+    }
 
     &::before {
       content: "";
@@ -180,6 +208,10 @@
 
   .page-header__logo {
     width: 202px;
+  }
+
+  .page-header__logo-img {
+    width: 202px;
     height: 59px;
   }
 
@@ -193,7 +225,10 @@
 
     font-size: 20px;
     line-height: 24.86px;
-    color: $white;
+
+    &:link {
+      color: $white;
+    }
 
     &::before {
       bottom: 5px;
@@ -201,7 +236,11 @@
       border-color: $white;
     }
 
-    &--white {
+    &--active {
+      color: $white;
+    }
+
+    &--black {
       color: $black-two;
 
       &::before {

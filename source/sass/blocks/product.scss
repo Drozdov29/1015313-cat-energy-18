@@ -14,12 +14,11 @@
   line-height: 60px;
   font-family: $font-stack;
   color: $black-two;
-
-  border-bottom: 1px solid $gray-six;
 }
 
 .product__list {
   margin: 0;
+  padding: 0;
 
   list-style: none;
 
@@ -29,21 +28,24 @@
 .product__item {
   display: flex;
   flex-wrap: wrap;
+  padding: 0 20px;
   padding-bottom: 24px;
 
   border-bottom: 1px solid $gray-six;
+
+  &:first-child {
+    border-top: 1px solid $gray-six;
+  }
 }
 
 .item-goods__link {
-  width: 140px;
   height: 144px;
 
   @include box-sizing;
 }
 
 .item-goods__link-img {
-  max-width: 100%;
-  height: auto;
+  width: 140px;
 }
 
 .item-goods__inner {
@@ -162,24 +164,31 @@
   color: $black-four;
 }
 
+.more-goods__button.button {
+  font-size: 16px;
+}
+
+
 // TABLET
 
 @media (min-width: $tablet-width) {
   .product__title {
-    margin: 0 30px;
-    margin-top: 55px;
+    width: 768px;
+    margin: 0 auto;
+    margin-top: 42px;
     margin-bottom: 25px;
-    padding: 0;
+    padding: 0 30px;
 
     font-size: 60px;
-
-    border: none;
   }
 
   .product__list {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    width: 768px;
+    margin: 0 auto;
+    padding: 0 30px;
     padding-bottom: 40px;
 
     list-style: none;
@@ -209,15 +218,21 @@
   }
 
   .item-goods__link {
-    width: 324px;
-    height: 144px;
-    margin-bottom: 20px;
+    margin-bottom: 21px;
 
     text-align: center;
   }
 
   .item-goods__link-img {
-    margin-top: -28px;
+    width: 324px;
+
+    &--small {
+      margin-top: -45px;
+    }
+
+    &--big {
+      margin-top: -81px;
+    }
   }
 
   .item-goods__inner {
@@ -227,7 +242,7 @@
   .inner__link {
     &-title {
       margin: 0;
-      margin-bottom: 20px;
+      margin-bottom: 19px;
       padding: 0 47px;
 
       font-size: 20px;
@@ -296,10 +311,19 @@
 
 @media (min-width: $desktop-width) {
   .product__title {
-    margin: 0;
-    margin-top: 73px;
+    width: 1300px;
+    margin: 0 auto;
+    margin-top: 60px;
     margin-bottom: 23px;
     padding: 0 40px;
+  }
+
+  .product__list {
+    width: 1300px;
+    margin: 0 auto;
+    padding: 0 40px;
+
+    @include box-sizing;
   }
 
   .product__item {
@@ -312,13 +336,7 @@
   }
 
   .item-goods__link {
-    width: 245px;
-    height: 144px;
     margin-bottom: 19px;
-  }
-
-  .item-goods__link-img {
-    margin-top: -28px;
   }
 
   .item-goods__inner {

@@ -17,6 +17,8 @@ body {
 
 @media (min-width: $tablet-width) {
   .container {
+    box-sizing: border-box;
+    width: 768px;
     margin: 0 auto;
     padding: 0 30px;
   }
@@ -24,6 +26,8 @@ body {
 
 @media (min-width: $desktop-width) {
   .container {
+    box-sizing: border-box;
+    width: 1300px;
     margin: 0 auto;
     padding: 0 40px;
   }
@@ -46,4 +50,11 @@ input[type="radio"].visually-hidden {
 
   clip: rect(0 0 0 0);
   clip-path: inset(100%);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+
+  border-style: none;
 }

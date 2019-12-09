@@ -62,9 +62,12 @@
   margin: 0;
   padding: 0;
 
-  line-height: 18px;
-  font-family: "Arial MT", "Arial", sans-serif;
+  font-family: $font-second;
   color: $black-four;
+}
+
+br {
+  display: none;
 }
 
 // TABLET
@@ -146,7 +149,7 @@
 
 @media (min-width: $desktop-width) {
   .info {
-    margin-bottom: 89px;
+    margin-bottom: 91px;
   }
 
   .info__title {
