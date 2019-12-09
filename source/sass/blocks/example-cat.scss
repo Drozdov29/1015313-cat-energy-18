@@ -197,3 +197,65 @@
     margin-right: auto;
   }
 }
+
+// DESKTOP
+
+@media (min-width: $desktop-width) {
+  .example {
+    margin-top: 92px;
+
+    background-color: $grey;
+  }
+
+  .example__wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 1300px;
+    margin: 0 auto;
+    padding: 0 40px;
+
+    @include box-sizing;
+  }
+
+  .container {
+    margin: 0;
+    padding: 0;
+  }
+
+  .example__cat {
+    position: relative;
+
+    width: 688px;
+    margin: 0 auto;
+  }
+
+  .example__cat-img {
+    position: absolute;
+    top: -556px;
+    left: -79px;
+
+    &--before {
+      clip: rect(auto, 365px, auto, auto);
+    }
+
+    &--after {
+      display: block;
+
+      clip: rect(auto, auto, auto, 365px);
+    }
+  }
+
+  .example__cat-wrapper {
+    position: relative;
+
+    width: 570px;
+    padding-top: 502px;
+
+    background: linear-gradient(90deg, rgba(242, 242, 242, 1) 50%, rgba(234, 234, 234, 1) 50%, rgba(234, 234, 234, 1) 100%);
+  }
+
+  .example__compare-panel {
+    padding: 0;
+    padding-bottom: 65px;
+  }
+}

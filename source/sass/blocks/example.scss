@@ -178,8 +178,16 @@
 // DESKTOP
 
 @media (min-width: $desktop-width) {
-  .example {
-    min-height: 475px;
+  .container {
+    margin: 0;
+    padding: 0;
+  }
+
+  .example__info {
+    width: 570px;
+    padding: 0;
+
+    background-color: $grey;
   }
 
   .example__title {
