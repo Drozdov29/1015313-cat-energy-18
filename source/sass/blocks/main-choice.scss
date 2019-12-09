@@ -47,7 +47,7 @@
   padding: 0 20px;
   padding-bottom: 23px;
 
-  border-bottom: 1px solid red; //$gray-six;
+  border-bottom: 1px solid $gray-six;
 }
 
 .choice__item {
@@ -138,9 +138,9 @@ input[type="tel"]:focus + svg {
   fill: $green;
 }
 
-input[type="text"]:required:invalid,
-input[type="email"]:required:invalid,
-input[type="tel"]:required:invalid {
+input[type="text"]:invalid,
+input[type="email"]:invalid,
+input[type="tel"]:invalid {
   box-shadow: 0 0 0 2px $red-error;
 }
 

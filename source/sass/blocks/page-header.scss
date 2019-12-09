@@ -90,10 +90,14 @@
 
   &:hover[href],
   &:focus {
+    color: $black-two;
+
     opacity: 0.6;
   }
 
   &:active[href] {
+    color: $black-two;
+
     opacity: 0.3;
   }
 }
@@ -238,6 +242,25 @@
 
     &--active {
       color: $white;
+    }
+
+    &--white {
+      &:link {
+        color: $white;
+      }
+
+      &:hover[href],
+      &:focus {
+        color: $white;
+
+        opacity: 0.6;
+      }
+
+      &:active[href] {
+        color: $white;
+
+        opacity: 0.3;
+      }
     }
 
     &--black {
