@@ -3,6 +3,10 @@
   overflow: hidden;
 }
 
+.choice__wrapper-flex {
+  margin-bottom: 31px;
+}
+
 .main-choice__title {
   margin: 0;
   margin-top: 14px;
@@ -233,14 +237,13 @@ input[type="radio"]:disabled + label {
 }
 
 .choice__heading--contact {
-  margin-top: 31px;
   margin-bottom: 34px;
   padding: 0 20px;
 }
 
 .choice__list--contact {
+  margin-bottom: 15px;
   padding: 0 20px;
-  padding-bottom: 16px;
 }
 
 .choice__item-email {
@@ -286,7 +289,7 @@ input[type="radio"]:disabled + label {
 .choice__input--textarea {
   width: 280px;
   height: 150px;
-  margin: 0 20px 20px 20px;
+  margin: 0 20px 1px 20px;
   padding: 13px;
   overflow: auto;
 
@@ -375,6 +378,10 @@ input[type="radio"]:disabled + label {
 // TABLET
 
 @media (min-width: $tablet-width) {
+  .choice__wrapper-flex {
+    margin-bottom: 73px;
+  }
+
   .main-choice__title {
     margin: 0;
     margin-top: 42px;
@@ -507,17 +514,16 @@ input[type="radio"]:disabled + label {
   }
 
   .choice__heading--contact {
-    margin-top: 74px;
     margin-bottom: 77px;
     margin-left: -40px;
     padding: 0;
     padding-right: 42px;
-    padding-left: 39px;
+    // padding-left: 39px;
   }
 
   .choice__list--contact {
     padding: 0;
-    padding-bottom: 52px;
+    padding-bottom: 39px;
   }
 
   .choice__item-email {
@@ -642,12 +648,15 @@ input[type="radio"]:disabled + label {
   }
 
   .choice {
+    width: 1300px;
+    margin: 0 auto;
     padding: 0 40px;
   }
 
   .choice__wrapper-flex {
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 68px;
   }
 
   .choice__elements-flex {
@@ -663,15 +672,17 @@ input[type="radio"]:disabled + label {
   }
 
   .choice__heading--contact {
-    margin-top: 68px;
+    margin: 0;
     margin-bottom: 77px;
+    padding: 0;
+    padding-right: 42px;
   }
 
   .choice__list--contact {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    padding-bottom: 52px;
+    padding-bottom: 37px;
   }
 
   .choice__item-email,

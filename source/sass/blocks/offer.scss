@@ -111,7 +111,7 @@
 @media (min-width: $desktop-width) {
   .offer {
     min-height: 582px;
-    margin-bottom: 66px;
+    margin-bottom: 68px;
 
     &::before {
       top: -128px;
@@ -127,6 +127,10 @@
         background-image: url("../img/index-background-desktop@2x.jpg");
       }
     }
+  }
+
+  .offer__container {
+    position: relative;
   }
 
   .offer__title {
@@ -145,7 +149,7 @@
     right: 258px;
 
     width: 552px;
-    margin: 0;
+    margin: 0 auto;
   }
 
   .offer__link {

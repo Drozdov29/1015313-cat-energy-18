@@ -226,7 +226,7 @@
 
 @media (min-width: $desktop-width) {
   .catalog {
-    margin-bottom: 27px;
+    margin-bottom: 25px;
   }
 
   .catalog__list {
@@ -234,6 +234,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    padding-bottom: 44px;
   }
 
   .catalog__item {

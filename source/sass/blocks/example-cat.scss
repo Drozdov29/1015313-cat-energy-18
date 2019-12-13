@@ -203,8 +203,6 @@
 @media (min-width: $desktop-width) {
   .example {
     position: relative;
-
-    margin-top: 92px;
   }
 
   .example__wrapper {
@@ -230,10 +228,6 @@
     background-image: linear-gradient(to right, $grey 0, $grey 75%, $grey-two 75%, $grey-two 100%);
   }
 
-  .container {
-    margin: 0;
-    padding: 0;
-  }
 
   .example__cat {
     position: relative;
@@ -262,6 +256,7 @@
     position: relative;
 
     width: 570px;
+    margin: 0;
     padding-top: 502px;
 
     background: transparent;

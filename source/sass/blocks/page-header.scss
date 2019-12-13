@@ -89,7 +89,7 @@
   }
 
   &:hover[href],
-  &:focus {
+  &:focus[href] {
     color: $black-two;
 
     opacity: 0.6;
@@ -230,10 +230,6 @@
     font-size: 20px;
     line-height: 24.86px;
 
-    &:link {
-      color: $white;
-    }
-
     &::before {
       bottom: 5px;
 
@@ -250,7 +246,7 @@
       }
 
       &:hover[href],
-      &:focus {
+      &:focus[href] {
         color: $white;
 
         opacity: 0.6;
