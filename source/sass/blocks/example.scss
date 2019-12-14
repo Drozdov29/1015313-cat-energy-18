@@ -116,6 +116,9 @@
   }
 
   .example__info {
+    width: 768px;
+    margin: 0 auto;
+
     background-color: $white;
   }
 
@@ -195,12 +198,13 @@
     background-color: $grey;
   }
 }
+
 // DESKTOP
 
 @media (min-width: $desktop-width) {
   .example__info {
     width: 570px;
-    padding: 0;
+    margin: 0;
 
     background-color: $grey;
   }

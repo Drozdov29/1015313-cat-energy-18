@@ -226,6 +226,8 @@
     height: 462px;
 
     background-image: linear-gradient(to right, $grey 0, $grey 75%, $grey-two 75%, $grey-two 100%);
+
+    // background-image: linear-gradient() right, tomato 0, tomato calc(100% - 25%), green calc(100% - 25%), green 100%);
   }
 
 

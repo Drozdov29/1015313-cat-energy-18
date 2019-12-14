@@ -400,8 +400,12 @@ input[type="radio"]:disabled + label {
   }
 
   .choice {
+    width: 768px;
+    margin: 0 auto;
     padding-right: 67px;
     padding-left: 70px;
+
+    @include box-sizing;
   }
 
   .choice__list--name,
@@ -492,8 +496,6 @@ input[type="radio"]:disabled + label {
     font-size: 36px;
     line-height: 36px;
 
-    // background-color: $white;
-
     &::after {
       top: 23px;
     }
@@ -516,9 +518,9 @@ input[type="radio"]:disabled + label {
   .choice__heading--contact {
     margin-bottom: 77px;
     margin-left: -40px;
-    padding: 0;
+    // padding: 0;
     padding-right: 42px;
-    // padding-left: 39px;
+    padding-left: 39px;
   }
 
   .choice__list--contact {
@@ -672,9 +674,7 @@ input[type="radio"]:disabled + label {
   }
 
   .choice__heading--contact {
-    margin: 0;
     margin-bottom: 77px;
-    padding: 0;
     padding-right: 42px;
   }
 
