@@ -3,6 +3,7 @@
   position: relative;
 
   margin: 0 auto;
+  padding: 0 20px;
 
   background-color: $grey;
 
@@ -201,10 +202,6 @@
 // DESKTOP
 
 @media (min-width: $desktop-width) {
-  .example {
-    position: relative;
-  }
-
   .example__wrapper {
     display: flex;
     justify-content: space-between;
@@ -226,10 +223,7 @@
     height: 462px;
 
     background-image: linear-gradient(to right, $grey 0, $grey 75%, $grey-two 75%, $grey-two 100%);
-
-    // background-image: linear-gradient() right, tomato 0, tomato calc(100% - 25%), green calc(100% - 25%), green 100%);
   }
-
 
   .example__cat {
     position: relative;
@@ -259,6 +253,7 @@
 
     width: 570px;
     margin: 0;
+    padding: 0;
     padding-top: 502px;
 
     background: transparent;

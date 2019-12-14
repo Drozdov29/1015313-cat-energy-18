@@ -3,7 +3,7 @@
   background-color: $grey;
 }
 
-.example__wrapper {
+.example__info {
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -107,19 +107,19 @@
 
 @media (min-width: $tablet-width) {
   .example {
-    background-color: transparent;
-  }
+    position: relative;
 
-  .example__wrapper {
-    margin: 0 auto;
-    padding: 0 30px;
+    background-color: transparent;
   }
 
   .example__info {
     width: 768px;
     margin: 0 auto;
+    padding: 0 30px;
 
     background-color: $white;
+
+    @include box-sizing;
   }
 
   .example__title {
@@ -205,6 +205,7 @@
   .example__info {
     width: 570px;
     margin: 0;
+    padding: 0;
 
     background-color: $grey;
   }
