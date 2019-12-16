@@ -88,14 +88,14 @@
     color: $black-two;
   }
 
-  &:hover[href],
-  &:focus[href] {
+  &:hover,
+  &:focus {
     color: $black-two;
 
     opacity: 0.6;
   }
 
-  &:active[href] {
+  &:active {
     color: $black-two;
 
     opacity: 0.3;
@@ -245,14 +245,14 @@
         color: $white;
       }
 
-      &:hover[href],
-      &:focus[href] {
+      &:hover,
+      &:focus {
         color: $white;
 
         opacity: 0.6;
       }
 
-      &:active[href] {
+      &:active {
         color: $white;
 
         opacity: 0.3;
