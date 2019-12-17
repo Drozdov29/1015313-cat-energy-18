@@ -1,6 +1,11 @@
 // MOBILE
-.example__info {
+.example {
   background-color: $grey;
+}
+
+.example__info {
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .example__title {
@@ -68,7 +73,8 @@
 }
 
 .example__text-bottom {
-  margin: -9px 21px 0 18px;
+  max-width: 72px;
+  margin: -9px auto 0;
   padding: 0 8px;
 
   font-weight: inherit;
@@ -100,8 +106,20 @@
 // TABLET
 
 @media (min-width: $tablet-width) {
+  .example {
+    position: relative;
+
+    background-color: transparent;
+  }
+
   .example__info {
+    width: 768px;
+    margin: 0 auto;
+    padding: 0 30px;
+
     background-color: $white;
+
+    @include box-sizing;
   }
 
   .example__title {
@@ -149,12 +167,17 @@
   }
 
   .example__text-bottom {
-    margin: -10px 8px 0 8px;
+    max-width: 132px;
+    margin: -10px auto 0;
 
     font-size: 14px;
     line-height: 14px;
 
     background-color: $white;
+
+    &--br {
+      display: none;
+    }
   }
 
   .example__cost {
@@ -175,11 +198,16 @@
     background-color: $grey;
   }
 }
+
 // DESKTOP
 
 @media (min-width: $desktop-width) {
-  .example {
-    min-height: 475px;
+  .example__info {
+    width: 570px;
+    margin: 0;
+    padding: 0;
+
+    background-color: $grey;
   }
 
   .example__title {
@@ -200,6 +228,10 @@
 
   .example__item {
     flex-grow: 0;
+  }
+
+  .example__text-bottom {
+    background-color: $grey;
   }
 
   .example__list {

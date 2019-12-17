@@ -1,9 +1,8 @@
 @import "normalize.scss";             // normalize
 @import "variables.scss";             // СТИЛЬ С ПЕРЕМЕННЫМИ
-@import "font.scss";                  // СТИЛЬ СО ШРИФТАМИ
+@import "font.scss";                  // СТИЛЬ С ШРИФТАМИ
 @import "mixins.scss";                // СТИЛЬ С МИКСИНАМИ
-// @import "outlines.scss";              // СТИЛЬ ОБВОДКАМИ
-@import "scaffolding.scss";           // СТИЛЬ СО BODY
+@import "scaffolding.scss";           // СТИЛЬ С BODY
 // BLOCK index.html
 @import "blocks/button.scss";        // Кнопка
 @import "blocks/page-header.scss";   // Навигация

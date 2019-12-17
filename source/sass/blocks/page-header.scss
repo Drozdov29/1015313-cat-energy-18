@@ -88,12 +88,16 @@
     color: $black-two;
   }
 
-  &:hover[href],
+  &:hover,
   &:focus {
+    color: $black-two;
+
     opacity: 0.6;
   }
 
-  &:active[href] {
+  &:active {
+    color: $black-two;
+
     opacity: 0.3;
   }
 }
@@ -226,10 +230,6 @@
     font-size: 20px;
     line-height: 24.86px;
 
-    &:link {
-      color: $white;
-    }
-
     &::before {
       bottom: 5px;
 
@@ -238,6 +238,25 @@
 
     &--active {
       color: $white;
+    }
+
+    &--white {
+      &:link {
+        color: $white;
+      }
+
+      &:hover,
+      &:focus {
+        color: $white;
+
+        opacity: 0.6;
+      }
+
+      &:active {
+        color: $white;
+
+        opacity: 0.3;
+      }
     }
 
     &--black {
