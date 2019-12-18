@@ -1,4 +1,8 @@
 // MOBILE
+.main-product {
+  overflow: hidden;
+}
+
 .product {
   @include box-sizing;
 }
