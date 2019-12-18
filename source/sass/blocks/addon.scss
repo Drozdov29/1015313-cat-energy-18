@@ -282,7 +282,10 @@
   .addon {
     display: flex;
     flex-wrap: wrap;
+    width: 1300px;
+    margin: 0 auto;
     margin-bottom: 84px;
+    padding: 0 40px;
   }
 
   .addon__title {
