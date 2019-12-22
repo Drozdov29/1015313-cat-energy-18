@@ -11,7 +11,7 @@ ymaps.ready(init);
       // Наша метка, указываем коордианты
       var myGeoObjects = [];
       if (document.body.clientWidth < 768) {
-        myGeoObjects = new ymaps.Placemark([59.9385395452995, 30.323354907409684],{
+        myGeoObjects = new ymaps.Placemark([59.93863106417265,30.3230545],{
           balloonContentBody: 'HTML Academy: Кэт Энерджи',
           },{
           iconLayout: 'default#image',
@@ -21,7 +21,7 @@ ymaps.ready(init);
           iconImageSize: [55, 53],
           // Смещение левого верхнего угла иконки относительно
           // её «ножки» (точки привязки).
-          iconImageOffset: [-55, -53]
+          iconImageOffset: [-30, -40]
         });
 
           } else {
@@ -35,7 +35,7 @@ ymaps.ready(init);
           iconImageSize: [113, 106],
           // Смещение левого верхнего угла иконки относительно
           // её «ножки» (точки привязки).
-          iconImageOffset: [-87, -106]
+          iconImageOffset: [-87, -100]
           });
       }
 
