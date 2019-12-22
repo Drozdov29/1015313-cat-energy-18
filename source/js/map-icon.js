@@ -2,21 +2,17 @@ ymaps.ready(init);
 
   function init () {
     var myMap = new ymaps.Map("map", {
-      // Центр карты, указываем коордианты
-      center: [59.93863106417265, 30.3230545],
-      // Масштаб, тут все просто
-      zoom: 17,
-      // Отключаем все элементы управления
-      controls: ["zoomControl"],
-      // zoom при ctrl
-      behaviors: ["drag"]
+      center: [59.93863106417265,30.3230545], // Центр карты, указываем коордианты
+      zoom: 17,                   // Масштаб, тут все просто
+      controls: ["zoomControl"],  // Отключаем все элементы управления
+      behaviors: ["drag"]         //
       });
 
       var myGeoObjects = [];
 
       // Наша метка, указываем коордианты
-      myGeoObjects = new ymaps.Placemark([59.9385395452995, 30.323354907409684],{
-        balloonContentBody: 'Текст в балуне',
+      myGeoObjects = new ymaps.Placemark([59.93863106417265, 30.3230545],{
+        balloonContentBody: 'HTML Academy: Кэт Энерджи',
         },{
         iconLayout: 'default#image',
         // Путь до нашей картинки
@@ -25,7 +21,7 @@ ymaps.ready(init);
         iconImageSize: [113, 106],
         // Смещение левого верхнего угла иконки относительно
         // её «ножки» (точки привязки).
-        iconImageOffset: [0, 0]
+        iconImageOffset: [-57, -106]
       });
 
       var clusterer = new ymaps.Clusterer({
@@ -35,7 +31,5 @@ ymaps.ready(init);
 
       clusterer.add(myGeoObjects);
       myMap.geoObjects.add(clusterer);
-      // Отлючаем возможность изменения масштаба
-      myMap.behaviors.disable('scrollZoom');
-
+      myMap.behaviors.disable('scrollZoom'); // Отлючаем возможность изменения масштаба
   }
