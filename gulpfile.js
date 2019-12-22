@@ -60,7 +60,7 @@ gulp.task("html", function () {
     ]))
     .pipe(gulp.dest("build"))
 });
-gulp.task('js', function () {
+gulp.task("js", function () {
   gulp.src('source/*.js')
       .pipe(jsmin())
       .pipe(rename({suffix: '.min'}))
@@ -97,7 +97,7 @@ gulp.task("refresh", function (done) {
   server.reload();
   done();
 })
-gulp.task('minify', () => {
+gulp.task("minify", () => {
   return gulp.src('src/*.html')
     .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest('build'));
