@@ -19,25 +19,25 @@
 
 .page-footer__title {
   width: 50%;
-  margin: 0;
-  padding: 0;
 
   font-weight: inherit;
   font-size: 16px;
   line-height: 20px;
   color: $black-two;
   text-transform: uppercase;
+
+  @include reset-m-p;
 }
 
 .page-footer__subtext {
   width: 50%;
-  margin: 0;
-  padding: 0;
 
   font-weight: inherit;
   line-height: 20px;
   font-family: $font-second;
   color: $black-four;
+
+  @include reset-m-p;
 }
 
 .page-footer__map {
@@ -213,6 +213,8 @@
 
     font-size: 20px;
     line-height: 25px;
+
+    // @include reset-m-p;
   }
 
   .page-footer__subtext {
@@ -258,8 +260,8 @@
 
   .page-footer__logo {
     justify-content: flex-start;
-    margin: 0;
-    padding: 0;
+
+    @include reset-m-p;
   }
 
   .page-footer__social {
@@ -325,10 +327,10 @@
 
     width: 570px;
     min-height: 201px;
-    margin: 0;
-    padding: 0;
 
     background-color: $white;
+
+    @include reset-m-p;
   }
 
   .page-footer__title {
@@ -337,10 +339,9 @@
   }
 
   .page-footer__subtext {
-    margin: 0;
-    padding: 0;
-
     text-align: left;
+
+    @include reset-m-p;
   }
 
   .page-footer__map {

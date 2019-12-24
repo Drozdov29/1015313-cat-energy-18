@@ -1,5 +1,4 @@
 // MOBILE
-
 .addon__title {
   position: relative;
 
@@ -212,7 +211,6 @@
     border-top: 1px solid $gray-four;
   }
 
-
   .feature__heading {
     margin: 0;
     margin-right: auto;
@@ -292,8 +290,10 @@
   .addon__title {
     margin-top: 75px;
     margin-bottom: 81px;
+    margin-left: -40px;
     padding: 0;
     padding-right: 37px;
+    padding-left: 40px;
   }
 
   .addon__list {
