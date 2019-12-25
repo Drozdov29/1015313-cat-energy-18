@@ -1,16 +1,23 @@
 // MOBILE
 .catalog__list {
-  @include reset-list;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 18px;
+
+  list-style: none;
 }
 
 .catalog__item {
   width: 100%;
-  margin-bottom: 19px;
   padding: 20px;
 
   background-color: $grey;
 
   @include box-sizing;
+
+  &:not(:last-child) {
+    margin-bottom: 19px;
+  }
 }
 
 .catalog__title {
@@ -31,8 +38,8 @@
   &::before {
     content: "";
     position: absolute;
-    top: 3px;
-    left: 3px;
+    top: 4px;
+    left: 2px;
 
     width: 50px;
     height: 50px;
@@ -49,8 +56,8 @@
   }
 
   &--cat-slim::after {
-    top: 0;
-    left: 8px;
+    top: 1px;
+    left: 10px;
 
     width: 35px;
     height: 49px;
@@ -59,8 +66,8 @@
   }
 
   &--cat-pro::after {
-    top: 12px;
-    left: -10px;
+    top: 16px;
+    left: -8px;
 
     width: 67px;
     height: 28px;
@@ -76,8 +83,7 @@
   margin-bottom: 41px;
   padding: 0;
 
-  line-height: 18px;
-  font-family: "Arial MT", sans-serif;
+  font-family: $font-second;
   color: $black-four;
 
   &::before {
@@ -95,8 +101,6 @@
 
 .catalog__link {
   position: relative;
-
-  margin-bottom: 22px;
 
   font-size: 16px;
   line-height: 16px;
@@ -134,11 +138,18 @@
 
 // TABLET
 @media (min-width: $tablet-width) {
+  .catalog__list {
+    padding-bottom: 44px;
+  }
+
   .catalog__item {
-    margin-bottom: 37px;
     padding: 74px 62px 62px 52px;
 
     @include box-sizing;
+
+    &:not(:last-child) {
+      margin-bottom: 31px;
+    }
   }
 
   .catalog__title {
@@ -149,8 +160,8 @@
     font-size: 36px;
 
     &::before {
-      top: 10px;
-      left: 400px;
+      top: 16px;
+      left: 394px;
 
       width: 200px;
       height: 200px;
@@ -200,7 +211,7 @@
 
     &::before {
       top: 11px;
-      right: -50px;
+      right: -48px;
     }
 
     &:hover::before,
@@ -215,7 +226,7 @@
 
 @media (min-width: $desktop-width) {
   .catalog {
-    margin-bottom: 72px;
+    margin-bottom: 25px;
   }
 
   .catalog__list {
@@ -223,12 +234,16 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    padding-bottom: 44px;
   }
 
   .catalog__item {
     width: 570px;
-    margin: 0;
     padding: 74px 56px 62px 52px;
+
+    &:not(:last-child) {
+      margin: 0;
+    }
   }
 
   .catalog__title {
@@ -263,7 +278,7 @@
   }
 
   .catalog__subtitle {
-    margin-bottom: 31px;
+    margin-bottom: 33px;
 
     &--width1 {
       width: 465px;

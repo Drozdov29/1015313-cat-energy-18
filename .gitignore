@@ -8,9 +8,8 @@
 *.sublime*
 node_modules/
 npm-debug.*
-source/css/*.css
-source/css/*.map
-source/img/bg
+# source/css/*.css
+# source/css/*.map
 Thumbs.db
 csscomb.json
-source/sass/outlines.scss
+build/

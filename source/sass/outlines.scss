@@ -1,0 +1,26 @@
+body {
+  // background-size: 720px auto;
+  min-height: 750px;
+  // background: url("../img/bg/mobile/cat-energy-index-mobile-menu.jpg") no-repeat 50% 0;  // C меню
+  // background: url("../img/bg/mobile/cat-energy-form-mobile.jpg") no-repeat 50% 0;  // C меню
+
+  background: url("../img/bg/mobile/cat-energy-catalog-mobile.jpg") no-repeat 50% 0;  // C меню
+}
+
+@media (min-width: $tablet-width) {
+  body {
+    // background: url("../img/bg/tablet/cat-energy-index-tablet.jpg") no-repeat 50% 0;
+    // background: url("../img/bg/tablet/cat-energy-form-tablet.jpg") no-repeat 50% 0;
+    background: url("../img/bg/tablet/cat-energy-catalog-tablet.jpg") no-repeat 50% 0;
+    // background-size: 1178px auto;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  body {
+    // background: url("../img/bg/desktop/cat-energy-index-desktop.jpg") no-repeat 50% 0;
+    // background: url("../img/bg/desktop/cat-energy-form-desktop.jpg") no-repeat 50% 0;
+    background: url("../img/bg/desktop/cat-energy-catalog-desktop.jpg") no-repeat 50% 0;
+    // background-size: 1391px auto;
+  }
+}
