@@ -15,12 +15,8 @@ var svgstore = require("gulp-svgstore");
 var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
 var del = require("del");
-<<<<<<< HEAD
 var uglify = require('gulp-uglify');
 var pipeline = require('readable-stream').pipeline;
-=======
-var jsmin = require('gulp-jsmin');
->>>>>>> dc2cd55b1def5ca88b943da45067d54d7668851d
 var htmlmin = require('gulp-htmlmin');
 
 gulp.task("css", function () {
