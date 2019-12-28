@@ -15,6 +15,16 @@
   justify-content: space-between;
   align-items: center;
   min-height: 117px;
+
+  // IE исправляет баг align-items (центрирует по вертикали)
+
+  &--fix::after {
+    content: "";
+
+    min-height: inherit;
+
+    font-size: 0;
+  }
 }
 
 .page-footer__title {
@@ -76,6 +86,16 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  // IE исправляет баг align-items (центрирует по вертикали)
+
+  &--fix::after {
+    content: "";
+
+    min-height: inherit;
+
+    font-size: 0;
+  }
 }
 
 .page-footer__logo {
@@ -125,12 +145,8 @@
   list-style: none;
 }
 
-.page-footer__link svg {
+.page-footer__svg {
   fill: $gray-five;
-}
-
-.page-footer__link {
-  display: flex;
 
   &--vk {
     width: 22px;
@@ -147,14 +163,18 @@
     height: 19px;
   }
 
-  &:hover svg,
-  &:focus svg {
+  &:hover,
+  &:focus {
     fill: $green;
   }
 
-  &:active svg {
+  &:active {
     opacity: 0.3;
   }
+}
+
+.page-footer__link {
+  display: flex;
 }
 
 .page-footer__copyright {
@@ -175,25 +195,29 @@
   color: $black-four;
   text-decoration: none;
 
-  &--htmlacademy {
-    width: 40px;
-    height: 43px;
-    margin-left: auto;
-
-    fill: $gray-five;
+  &:hover,
+  &:focus {
+    color: $black-four;
   }
 
-  &:hover,
-  &:hover svg,
-  &:focus,
-  &:focus svg {
-    color: $black-four;
+  &:active {
+    opacity: 0.3;
+  }
+}
 
+.page-footer__blazon {
+  width: 40px;
+  height: 43px;
+  margin-left: auto;
+
+  fill: $gray-five;
+
+  &:hover,
+  &:focus {
     fill: $green;
   }
 
-  &:active,
-  &:active svg {
+  &:active {
     opacity: 0.3;
   }
 }
@@ -213,8 +237,6 @@
 
     font-size: 20px;
     line-height: 25px;
-
-    // @include reset-m-p;
   }
 
   .page-footer__subtext {
@@ -226,11 +248,11 @@
 
     font-size: 16px;
     text-align: right;
+  }
 
-    &--city {
-      display: inline-block;
-      padding-top: 20px;
-    }
+  .page-footer__subtext span {
+    display: inline-block;
+    padding-top: 20px;
   }
 
   .page-footer__map {
@@ -282,7 +304,7 @@
     margin: 0;
   }
 
-  .page-footer__link {
+  .page-footer__svg {
     &--vk {
       width: 30px;
       height: 16px;
@@ -302,6 +324,16 @@
   .page-footer__copyright {
     display: flex;
     justify-content: flex-end;
+
+    // IE исправляет баг align-items (центрирует по вертикали)
+
+    &--fix::after {
+      content: "";
+
+      min-height: inherit;
+
+      font-size: 0;
+    }
   }
 
   .page-footer__click {

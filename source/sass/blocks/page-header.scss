@@ -78,12 +78,6 @@
   text-transform: uppercase;
   text-decoration: none;
 
-  &--active {
-    color: $black-two;
-
-    cursor: pointer;
-  }
-
   &:link {
     color: $black-two;
   }
@@ -99,6 +93,12 @@
     color: $black-two;
 
     opacity: 0.3;
+  }
+
+  &-active {
+    color: $black-two;
+
+    cursor: pointer;
   }
 }
 
@@ -175,12 +175,6 @@
     font-size: 18px;
     line-height: 24px;
 
-    &--active {
-      color: $black-three;
-
-      cursor: pointer;
-    }
-
     &:link {
       color: $black-three;
     }
@@ -193,12 +187,13 @@
 
       width: 0;
       height: 2px;
-
-      border-top: 2px solid $green;
     }
 
-    &--active::before {
+    &-active--white::before,
+    &-active--black::before {
       width: 100%;
+
+      border-top: 2px solid $green;
     }
   }
 }
@@ -230,14 +225,19 @@
     font-size: 20px;
     line-height: 24.86px;
 
-    &::before {
-      bottom: 5px;
-
-      border-color: $white;
-    }
-
-    &--active {
+    &-active--white {
       color: $white;
+
+      &::before {
+        bottom: 5px;
+
+        border-color: $white;
+      }
+
+      &:hover,
+      &:focus {
+        color: $white;
+      }
     }
 
     &--white {
@@ -259,13 +259,39 @@
       }
     }
 
-    &--black {
+    &-active--black {
       color: $black-two;
 
       &::before {
         bottom: 5px;
 
         border-color: $green;
+      }
+
+      &:hover,
+      &:focus {
+        color: $black-two;
+      }
+    }
+
+    &--black {
+      color: $black-two;
+
+      &:link {
+        color: $black-two;
+      }
+
+      &:hover,
+      &:focus {
+        color: $black-two;
+
+        opacity: 0.6;
+      }
+
+      &:active {
+        color: $black-two;
+
+        opacity: 0.3;
       }
     }
   }
