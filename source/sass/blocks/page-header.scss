@@ -75,12 +75,12 @@
   font-weight: 500;
   font-size: 20px;
   line-height: 20px;
+  color: $black-two;
   text-transform: uppercase;
   text-decoration: none;
-
-  &:link {
-    color: $black-two;
-  }
+  // &:link {
+  //   color: $black-two;
+  // }
 
   &:hover,
   &:focus {
@@ -175,9 +175,9 @@
     font-size: 18px;
     line-height: 24px;
 
-    &:link {
-      color: $black-three;
-    }
+    // &:link {
+    //   color: $black-three;
+    // }
 
     &::before {
       content: "";
@@ -224,9 +224,10 @@
 
     font-size: 20px;
     line-height: 24.86px;
+    color: $white;
 
     &-active--white {
-      color: $white;
+      // color: $white;
 
       &::before {
         bottom: 5px;
